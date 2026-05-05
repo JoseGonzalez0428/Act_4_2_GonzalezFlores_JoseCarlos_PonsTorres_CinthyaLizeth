@@ -1,1 +1,262 @@
 /* You can add global styles to this file, and also import other style files */
+/* =========================================================
+   VARIABLES GLOBALES DEL SISTEMA DE DISEÑO
+   Dashboard de monitoreo de cursos - UASLP
+   ========================================================= */
+
+:root {
+  /* Action / Primarios */
+  --action-primary: #004998;
+  --action-primary-hover: #2463b4;
+  --action-primary-active: #003878;
+
+  --action-secondary: #e7ecf1;
+  --action-secondary-hover: #beceec;
+
+  /* Feedback / Status */
+  --status-success-bg: #eaf5ee;
+  --status-success-text: #1b7b5a;
+
+  --status-error-bg: #fdecea;
+  --status-error-text: #d63031;
+
+  --status-warning-bg: #fff8e6;
+  --status-warning-text: #a07208;
+
+  --status-info-bg: #e6f0fa;
+  --status-info-text: #004998;
+
+  /* Neutrales y superficies */
+  --text-main: #000000;
+  --text-muted: #c6c7d0;
+
+  --surface-primary: #ffffff;
+  --surface-neutral: #f5f5f6;
+
+  --state-disabled: #c8cdd6;
+
+  /* Bordes y sombras */
+  --border-light: #d9dce3;
+  --border-primary: #004998;
+
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  /* Medidas generales */
+  --radius-small: 6px;
+  --radius-medium: 10px;
+  --radius-large: 16px;
+
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+}
+
+/* =========================================================
+   RESET BÁSICO
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--surface-neutral);
+  color: var(--text-main);
+}
+
+/* =========================================================
+   CLASES AUXILIARES DE COLOR
+   Estas clases se pueden usar en cualquier componente.
+   ========================================================= */
+
+.bg-primary {
+  background-color: var(--action-primary);
+}
+
+.bg-primary-hover {
+  background-color: var(--action-primary-hover);
+}
+
+.bg-primary-active {
+  background-color: var(--action-primary-active);
+}
+
+.bg-secondary {
+  background-color: var(--action-secondary);
+}
+
+.bg-secondary-hover {
+  background-color: var(--action-secondary-hover);
+}
+
+.bg-success {
+  background-color: var(--status-success-bg);
+  color: var(--status-success-text);
+}
+
+.bg-error {
+  background-color: var(--status-error-bg);
+  color: var(--status-error-text);
+}
+
+.bg-warning {
+  background-color: var(--status-warning-bg);
+  color: var(--status-warning-text);
+}
+
+.bg-info {
+  background-color: var(--status-info-bg);
+  color: var(--status-info-text);
+}
+
+.text-primary {
+  color: var(--action-primary);
+}
+
+.text-primary-hover {
+  color: var(--action-primary-hover);
+}
+
+.text-primary-active {
+  color: var(--action-primary-active);
+}
+
+.text-success {
+  color: var(--status-success-text);
+}
+
+.text-error {
+  color: var(--status-error-text);
+}
+
+.text-warning {
+  color: var(--status-warning-text);
+}
+
+.text-info {
+  color: var(--status-info-text);
+}
+
+.text-main {
+  color: var(--text-main);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   BOTONES BASE
+   Los podemos reutilizar después en el componente Button.
+   ========================================================= */
+
+.btn-base {
+  border: none;
+  border-radius: var(--radius-small);
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-base:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: var(--action-primary);
+  color: var(--surface-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--action-primary-hover);
+}
+
+.btn-primary:active {
+  background-color: var(--action-primary-active);
+}
+
+.btn-secondary {
+  background-color: var(--action-secondary);
+  color: var(--action-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--action-secondary-hover);
+}
+
+.btn-disabled,
+.btn-base:disabled {
+  background-color: var(--state-disabled);
+  color: var(--surface-primary);
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   TARJETAS BASE
+   ========================================================= */
+
+.card-base {
+  background-color: var(--surface-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-soft);
+}
+
+/* =========================================================
+   INPUTS BASE
+   ========================================================= */
+
+.input-base {
+  width: 100%;
+  border: 1px solid var(--action-primary-hover);
+  border-radius: var(--radius-small);
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--text-main);
+  background-color: var(--surface-primary);
+  outline: none;
+}
+
+.input-base:focus {
+  border-color: var(--action-primary);
+}
+
+.input-base::placeholder {
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   ESTADOS
+   ========================================================= */
+
+.status-success {
+  background-color: var(--status-success-bg);
+  color: var(--status-success-text);
+}
+
+.status-error {
+  background-color: var(--status-error-bg);
+  color: var(--status-error-text);
+}
+
+.status-warning {
+  background-color: var(--status-warning-bg);
+  color: var(--status-warning-text);
+}
+
+.status-info {
+  background-color: var(--status-info-bg);
+  color: var(--status-info-text);
+}

@@ -1,0 +1,32 @@
+<div
+  class="progress-wrapper"
+  [class.progress-primary]="variant === 'primary'"
+  [class.progress-success]="variant === 'success'"
+  [class.progress-error]="variant === 'error'"
+  [class.progress-disabled]="variant === 'disabled'"
+>
+  <div class="progress-header">
+    <span class="progress-label">
+      {{ label }}
+    </span>
+
+    @if (showPercent) {
+      <span class="progress-percent">
+        {{ safeValue }}%
+      </span>
+    }
+
+    @if (showInfo) {
+      <span class="progress-info" aria-label="Información">
+        i
+      </span>
+    }
+  </div>
+
+  <div class="progress-track">
+    <div
+      class="progress-fill"
+      [style.width.%]="safeValue"
+    ></div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div
+  class="ui-label"
+  [class.ui-label-primary]="variant === 'primary'"
+  [class.ui-label-warning]="variant === 'warning'"
+  [class.ui-label-error]="variant === 'error'"
+  [class.ui-label-disabled]="isDisabled"
+>
+  <div class="ui-label-content">
+    <span class="ui-label-text">
+      {{ text }}
+    </span>
+
+    @if (percent !== '') {
+      <span class="ui-label-percent">
+        {{ percent }}
+      </span>
+    }
+
+    @if (showInfo) {
+      <span class="ui-label-info" aria-label="Información">
+        i
+      </span>
+    }
+  </div>
+
+  @if (showUnderline) {
+    <div class="ui-label-line"></div>
+  }
+</div>

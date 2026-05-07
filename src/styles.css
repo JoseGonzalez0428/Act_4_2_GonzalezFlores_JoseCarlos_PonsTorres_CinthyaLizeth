@@ -51,6 +51,70 @@
   --spacing-md: 16px;
   --spacing-lg: 24px;
   --spacing-xl: 32px;
+
+    /* Tipografía */
+  --font-main: Roboto, Arial, Helvetica, sans-serif;
+
+  --font-size-h1: 96px;
+  --font-size-h2: 60px;
+  --font-size-h3: 48px;
+  --font-size-h4: 34px;
+  --font-size-h5: 24px;
+  --font-size-h6: 20px;
+
+  --font-size-subtitle-1: 16px;
+  --font-size-subtitle-2: 14px;
+
+  --font-size-body-1: 16px;
+  --font-size-body-2: 14px;
+
+  --font-size-button: 14px;
+  --font-size-caption: 12px;
+  --font-size-overline: 10px;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+
+  --letter-spacing-h1: -1.5px;
+  --letter-spacing-h2: -0.5px;
+  --letter-spacing-h3: 0px;
+  --letter-spacing-h4: 0.25px;
+  --letter-spacing-h5: 0px;
+  --letter-spacing-h6: 0.15px;
+
+  --letter-spacing-subtitle-1: 0.15px;
+  --letter-spacing-subtitle-2: 0.1px;
+
+  --letter-spacing-body-1: 0.5px;
+  --letter-spacing-body-2: 0.25px;
+
+  --letter-spacing-button: 0.16px;
+  --letter-spacing-caption: 0.4px;
+  --letter-spacing-overline: 1.5px;
+
+    /* =========================================================
+     BREAKPOINTS Y LAYOUT RESPONSIVO
+     ========================================================= */
+
+  --breakpoint-tablet-max: 1023px;
+  --breakpoint-mobile-max: 719px;
+
+  --screen-desktop: 1440px;
+  --screen-tablet: 720px;
+  --screen-mobile: 360px;
+
+  --screen-padding-desktop: 80px;
+  --screen-padding-tablet: 32px;
+  --screen-padding-mobile: 16px;
+
+  --grid-gap-desktop: 24px;
+  --grid-gap-tablet: 24px;
+  --grid-gap-mobile: 16px;
+
+  --grid-columns-desktop: 8;
+  --grid-columns-tablet: 8;
+  --grid-columns-mobile: 4;
 }
 
 /* =========================================================
@@ -69,7 +133,7 @@ body {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-main);
   background-color: var(--surface-neutral);
   color: var(--text-main);
 }
@@ -259,4 +323,272 @@ body {
 .status-info {
   background-color: var(--status-info-bg);
   color: var(--status-info-text);
+}
+
+/* =========================================================
+   SISTEMA TIPOGRÁFICO
+   Basado en la guía de Figma
+   ========================================================= */
+
+.typography-h1 {
+  font-family: var(--font-main);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-light);
+  letter-spacing: var(--letter-spacing-h1);
+  line-height: normal;
+}
+
+.typography-h2 {
+  font-family: var(--font-main);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-light);
+  letter-spacing: var(--letter-spacing-h2);
+  line-height: normal;
+}
+
+.typography-h3 {
+  font-family: var(--font-main);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-h3);
+  line-height: normal;
+}
+
+.typography-h4 {
+  font-family: var(--font-main);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-h4);
+  line-height: normal;
+}
+
+.typography-h5 {
+  font-family: var(--font-main);
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-h5);
+  line-height: normal;
+}
+
+.typography-h6 {
+  font-family: var(--font-main);
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-h6);
+  line-height: normal;
+}
+
+.typography-subtitle-1 {
+  font-family: var(--font-main);
+  font-size: var(--font-size-subtitle-1);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-subtitle-1);
+  line-height: normal;
+}
+
+.typography-subtitle-2 {
+  font-family: var(--font-main);
+  font-size: var(--font-size-subtitle-2);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-subtitle-2);
+  line-height: normal;
+}
+
+.typography-body-1 {
+  font-family: var(--font-main);
+  font-size: var(--font-size-body-1);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-body-1);
+  line-height: normal;
+}
+
+.typography-body-2 {
+  font-family: var(--font-main);
+  font-size: var(--font-size-body-2);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-body-2);
+  line-height: normal;
+}
+
+.typography-button {
+  font-family: var(--font-main);
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-button);
+  line-height: normal;
+}
+
+.typography-caption {
+  font-family: var(--font-main);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-caption);
+  line-height: normal;
+}
+
+.typography-overline {
+  font-family: var(--font-main);
+  font-size: var(--font-size-overline);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-overline);
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   ETIQUETAS HTML BASE
+   Esto ayuda a que h1, h2, p, etc. ya tengan estilos coherentes.
+   ========================================================= */
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-light);
+  letter-spacing: var(--letter-spacing-h1);
+  margin: 0;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-light);
+  letter-spacing: var(--letter-spacing-h2);
+  margin: 0;
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-h3);
+  margin: 0;
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-h4);
+  margin: 0;
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-h5);
+  margin: 0;
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-h6);
+  margin: 0;
+}
+
+p {
+  font-size: var(--font-size-body-1);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-body-1);
+  margin: 0;
+}
+
+small {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-caption);
+}
+
+/* =========================================================
+   SISTEMA DE LAYOUT RESPONSIVO
+   ========================================================= */
+
+.layout-container {
+  width: 100%;
+  max-width: var(--screen-desktop);
+  margin: 0 auto;
+  padding-left: var(--screen-padding-desktop);
+  padding-right: var(--screen-padding-desktop);
+}
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns-desktop), minmax(0, 1fr));
+  gap: var(--grid-gap-desktop);
+  width: 100%;
+}
+
+/* Utilidades de columnas para desktop */
+.span-1 { grid-column: span 1; }
+.span-2 { grid-column: span 2; }
+.span-3 { grid-column: span 3; }
+.span-4 { grid-column: span 4; }
+.span-5 { grid-column: span 5; }
+.span-6 { grid-column: span 6; }
+.span-7 { grid-column: span 7; }
+.span-8 { grid-column: span 8; }
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Espaciados útiles */
+.section-spacing {
+  margin-top: 24px;
+}
+
+.section-spacing-lg {
+  margin-top: 32px;
+}
+
+/* =========================================================
+   TABLET
+   720px - 1023px
+   ========================================================= */
+
+@media (max-width: 1023px) {
+  .layout-container {
+    max-width: var(--screen-tablet);
+    padding-left: var(--screen-padding-tablet);
+    padding-right: var(--screen-padding-tablet);
+  }
+
+  .layout-grid {
+    grid-template-columns: repeat(var(--grid-columns-tablet), minmax(0, 1fr));
+    gap: var(--grid-gap-tablet);
+  }
+
+  .section-spacing {
+    margin-top: 24px;
+  }
+
+  .section-spacing-lg {
+    margin-top: 24px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   0px - 719px
+   ========================================================= */
+
+@media (max-width: 719px) {
+  .layout-container {
+    max-width: var(--screen-mobile);
+    padding-left: var(--screen-padding-mobile);
+    padding-right: var(--screen-padding-mobile);
+  }
+
+  .layout-grid {
+    grid-template-columns: repeat(var(--grid-columns-mobile), minmax(0, 1fr));
+    gap: var(--grid-gap-mobile);
+  }
+
+  .full-width-mobile {
+    grid-column: 1 / -1;
+  }
+
+  .section-spacing {
+    margin-top: 16px;
+  }
+
+  .section-spacing-lg {
+    margin-top: 16px;
+  }
 }

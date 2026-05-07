@@ -1,0 +1,11 @@
+<div class="search-box" [class.active]="isActive">
+  <input
+    type="text"
+    placeholder="Buscar"
+    (focus)="onFocus()"
+    (blur)="onBlur()"
+    (input)="onInput($event)"
+    aria-label="Buscar"
+  />
+  <span class="search-icon">&#128269;</span>
+</div>

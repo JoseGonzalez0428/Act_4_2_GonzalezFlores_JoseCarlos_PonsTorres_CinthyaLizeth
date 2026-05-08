@@ -72,6 +72,56 @@
       <app-search-box></app-search-box>
     </div>
   </section>
+
+  <section class="preview-section">
+  <h2 class="preview-subtitle">Card</h2>
+
+  <div class="preview-card-grid">
+    <app-ui-card
+      title="Title"
+      subtitle="Subtitle"
+      description="Texto"
+      progressLabel="Label"
+      [progressValue]="0"
+      buttonText="Button"
+      footerLabel="Label"
+      variant="primary"
+    ></app-ui-card>
+
+    <app-ui-card
+      title="Title"
+      subtitle="Subtitle"
+      description="Texto"
+      progressLabel="Label"
+      [progressValue]="0"
+      buttonText="Button"
+      footerLabel="Label"
+      variant="success"
+    ></app-ui-card>
+
+    <app-ui-card
+      title="Title"
+      subtitle="Subtitle"
+      description="Texto"
+      progressLabel="Label"
+      [progressValue]="0"
+      buttonText="Button"
+      footerLabel="Label"
+      variant="warning"
+    ></app-ui-card>
+
+    <app-ui-card
+      title="Title"
+      subtitle="Subtitle"
+      description="Texto"
+      progressLabel="Label"
+      [progressValue]="0"
+      buttonText="Button"
+      footerLabel="Label"
+      variant="error"
+    ></app-ui-card>
+  </div>
+</section>
 </main>
 
 <router-outlet />

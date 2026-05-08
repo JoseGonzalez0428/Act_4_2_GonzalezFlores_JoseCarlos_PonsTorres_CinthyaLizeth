@@ -56,3 +56,16 @@
 .preview-section + .preview-section {
   margin-top: 32px;
 }
+
+.preview-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 320px));
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 719px) {
+  .preview-card-grid {
+    grid-template-columns: 1fr;
+  }
+}

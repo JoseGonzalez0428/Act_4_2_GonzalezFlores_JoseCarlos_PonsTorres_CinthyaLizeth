@@ -1,0 +1,48 @@
+<article
+  class="ui-card"
+  [class.ui-card-primary]="variant === 'primary'"
+  [class.ui-card-success]="variant === 'success'"
+  [class.ui-card-warning]="variant === 'warning'"
+  [class.ui-card-error]="variant === 'error'"
+>
+  <header class="ui-card-header">
+    <div class="ui-card-title-group">
+      <h3 class="ui-card-title">
+        {{ title }}
+      </h3>
+
+      <p class="ui-card-subtitle">
+        {{ subtitle }}
+      </p>
+    </div>
+
+    <span class="ui-card-info" aria-label="Información">
+      i
+    </span>
+  </header>
+
+  <section class="ui-card-body">
+    <p class="ui-card-description">
+      {{ description }}
+    </p>
+
+    <app-ui-progress-bar
+      class="ui-card-progress"
+      [label]="progressLabel"
+      [value]="progressValue"
+      [variant]="progressVariant"
+    ></app-ui-progress-bar>
+  </section>
+
+  <footer class="ui-card-footer">
+    <button class="ui-card-button" type="button">
+      <span>{{ buttonText }}</span>
+      <span class="ui-card-button-icon">↓</span>
+    </button>
+
+    <button class="ui-card-link" type="button">
+      <span>{{ footerLabel }}</span>
+      <span class="ui-card-link-icon">→</span>
+    </button>
+  </footer>
+</article>

@@ -4,5 +4,10 @@
   [disabled]="variant === 'disabled'"
   (click)="onClick()">
   {{ label }}
-  <span class="btn-icon" *ngIf="showIcon">+</span>
+  <app-icon 
+    *ngIf="showIcon"
+    [name]="icon" 
+    [size]="20" 
+    [color]="getIconColor()">
+  </app-icon>
 </button>

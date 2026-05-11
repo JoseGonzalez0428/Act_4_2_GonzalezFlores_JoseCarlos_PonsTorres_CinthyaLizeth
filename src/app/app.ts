@@ -5,10 +5,11 @@ import { ProgressBar } from './Components/progress-bar/progress-bar';
 import { Badge } from './Components/badge/badge';
 import { SearchBoxComponent } from './Components/search-box/search-box';
 import { Card } from './Components/card/card';
+import { ButtonComponent } from './Components/button/button';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Label, ProgressBar,Badge, SearchBoxComponent, Card],
+  imports: [RouterOutlet, Label, ProgressBar,Badge, SearchBoxComponent, Card, ButtonComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

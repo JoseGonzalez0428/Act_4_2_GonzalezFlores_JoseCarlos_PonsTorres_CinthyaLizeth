@@ -1,4 +1,8 @@
 <span class="badge" [class]="color + ' ' + variant">
   {{ label }}
-  <span class="badge-icon" aria-label="Información">i</span>
+  <app-icon 
+    [name]="icon" 
+    [size]="18" 
+    [color]="variant === 'filled' ? 'white' : color">
+  </app-icon>
 </span>

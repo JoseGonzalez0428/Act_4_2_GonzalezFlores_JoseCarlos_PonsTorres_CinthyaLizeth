@@ -69,3 +69,14 @@
     grid-template-columns: 1fr;
   }
 }
+
+.preview-section {
+  overflow-x: auto;
+}
+
+.preview-forms-grid {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: wrap;
+}

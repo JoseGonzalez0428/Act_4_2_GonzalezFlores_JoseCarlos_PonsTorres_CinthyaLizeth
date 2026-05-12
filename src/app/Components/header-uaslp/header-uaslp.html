@@ -1,0 +1,25 @@
+<header class="ui-header-uaslp">
+  <div class="ui-header-content">
+    @if (logoSrc !== '') {
+      <img
+        class="ui-header-logo"
+        [src]="logoSrc"
+        alt="Logo UASLP"
+      />
+    } @else {
+      <div class="ui-header-logo-placeholder">
+        U
+      </div>
+    }
+
+    <div class="ui-header-text">
+      <h1 class="ui-header-title">
+        {{ universityName }}
+      </h1>
+
+      <p class="ui-header-subtitle">
+        {{ subtitle }}
+      </p>
+    </div>
+  </div>
+</header>

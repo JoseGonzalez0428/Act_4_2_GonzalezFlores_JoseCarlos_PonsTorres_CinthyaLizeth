@@ -5,10 +5,29 @@ import { ProgressBar } from './Components/progress-bar/progress-bar';
 import { Badge } from './Components/badge/badge';
 import { SearchBoxComponent } from './Components/search-box/search-box';
 import { Card } from './Components/card/card';
+import { Calendar } from './Components/calendar/calendar';
+import { FooterUaslp } from './Components/footer-uaslp/footer-uaslp';
+import { HeaderUaslp } from './Components/header-uaslp/header-uaslp';
+import { HeaderMateria } from './Components/header-materia/header-materia';
+import { ActivityForm } from './Components/activity-form/activity-form';
+import { MatterForm } from './Components/matter-form/matter-form';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Label, ProgressBar,Badge, SearchBoxComponent, Card],
+  imports: [
+    RouterOutlet,
+    Label,
+    ProgressBar,
+    Badge,
+    SearchBoxComponent,
+    Card,
+    Calendar,
+    FooterUaslp,
+    HeaderUaslp,
+    HeaderMateria,
+    ActivityForm,
+    MatterForm
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

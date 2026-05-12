@@ -1,0 +1,28 @@
+<header class="ui-header-materia">
+  <div class="ui-header-materia-info">
+    <h2 class="ui-header-materia-title">
+      {{ title }}
+    </h2>
+
+    <div class="ui-header-materia-badges">
+      <span class="ui-header-materia-badge">
+        {{ semester }}
+      </span>
+
+      <span class="ui-header-materia-badge">
+        {{ group }}
+      </span>
+    </div>
+  </div>
+
+  @if (showBackButton) {
+    <button
+      class="ui-header-materia-back"
+      type="button"
+      aria-label="Regresar"
+      (click)="onBackClick()"
+    >
+      ←
+    </button>
+  }
+</header>

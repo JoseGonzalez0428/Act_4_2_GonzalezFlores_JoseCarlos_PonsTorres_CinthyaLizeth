@@ -1,0 +1,233 @@
+.ui-calendar {
+  width: 100%;
+  max-width: 1250px;
+  min-height: 944px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--surface-primary);
+  border: 2px solid var(--action-primary);
+  font-family: var(--font-main);
+  color: var(--action-primary);
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.ui-calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 96px;
+
+  padding: 0 16px;
+  min-height: 140px;
+  align-items: flex-start;
+}
+
+.ui-calendar-day {
+  min-width: 78px;
+  height: 46px;
+
+  border: none;
+  border-radius: var(--radius-small);
+
+  background-color: var(--action-primary);
+  color: var(--surface-primary);
+
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-caption);
+
+  cursor: pointer;
+}
+
+/* =========================
+   BODY
+   ========================= */
+
+.ui-calendar-body {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  gap: 12px;
+
+  padding: 0 16px;
+  flex: 1;
+  align-content: start;
+}
+
+.ui-calendar-cell {
+  min-height: 80px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 14px 16px;
+
+  background-color: var(--surface-primary);
+  border: 1px solid var(--action-primary-hover);
+  border-radius: var(--radius-small);
+}
+
+.ui-calendar-date {
+  min-width: 78px;
+  height: 48px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border-radius: var(--radius-small);
+
+  background-color: var(--action-primary);
+  color: var(--surface-primary);
+
+  flex-shrink: 0;
+}
+
+.ui-calendar-number {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-caption);
+}
+
+.ui-calendar-info {
+  width: 14px;
+  height: 14px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid currentColor;
+  border-radius: 50%;
+
+  font-size: 9px;
+  line-height: 1;
+}
+
+.ui-calendar-description {
+  margin: 0;
+
+  color: var(--action-primary);
+  font-size: var(--font-size-body-2);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-body-2);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.ui-calendar-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 8px;
+}
+
+.ui-calendar-nav-button {
+  min-width: 128px;
+  height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  border: none;
+  border-radius: var(--radius-small);
+
+  background-color: var(--status-info-bg);
+  color: var(--action-primary);
+
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-button);
+
+  cursor: pointer;
+}
+
+.ui-calendar-arrow {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.ui-calendar-arrow.left {
+  order: -1;
+}
+
+/* =========================
+   RESPONSIVO TABLET
+   ========================= */
+
+@media (max-width: 1023px) {
+  .ui-calendar {
+    min-height: auto;
+  }
+
+  .ui-calendar-header {
+    gap: 8px;
+    min-height: auto;
+    padding: 12px;
+  }
+
+  .ui-calendar-day {
+    min-width: auto;
+    width: 100%;
+    height: 32px;
+    font-size: var(--font-size-caption);
+  }
+
+  .ui-calendar-body {
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    padding: 12px;
+  }
+}
+
+/* =========================
+   RESPONSIVO MOBILE
+   ========================= */
+
+@media (max-width: 719px) {
+  .ui-calendar-header {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    padding: 8px;
+  }
+
+  .ui-calendar-day {
+    height: 28px;
+    padding: 0 4px;
+    font-size: 10px;
+  }
+
+  .ui-calendar-body {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .ui-calendar-cell {
+    min-height: 64px;
+    padding: 10px;
+  }
+
+  .ui-calendar-date {
+    min-width: 64px;
+    height: 40px;
+  }
+
+  .ui-calendar-footer {
+    padding: 12px 8px;
+  }
+
+  .ui-calendar-nav-button {
+    min-width: 110px;
+    height: 34px;
+  }
+}

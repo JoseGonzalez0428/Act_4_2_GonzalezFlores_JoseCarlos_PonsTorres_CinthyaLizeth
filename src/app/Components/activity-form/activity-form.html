@@ -1,0 +1,131 @@
+<form class="activity-form">
+  <header class="form-header">
+    <div>
+      <h2 class="form-title">{{ title }}</h2>
+      <p class="form-date">{{ date }}</p>
+    </div>
+
+    <span class="form-info" aria-label="Información">i</span>
+  </header>
+
+  <section class="form-section">
+    <label class="form-label">Estado de la sesion</label>
+
+    <div class="status-group">
+      <button
+        type="button"
+        class="status-badge status-completed"
+        [class.status-selected]="sessionStatus === 'completed'"
+        (click)="setStatus('completed')"
+      >
+        completado
+      </button>
+
+      <button
+        type="button"
+        class="status-badge status-pending"
+        [class.status-selected]="sessionStatus === 'pending'"
+        (click)="setStatus('pending')"
+      >
+        incompleto
+      </button>
+
+      <button
+        type="button"
+        class="status-badge status-incomplete"
+        [class.status-selected]="sessionStatus === 'incomplete'"
+        (click)="setStatus('incomplete')"
+      >
+        inconcluso
+      </button>
+
+      <button
+        type="button"
+        class="status-badge status-active"
+        [class.status-selected]="sessionStatus === 'active'"
+        (click)="setStatus('active')"
+      >
+        Pendiente
+      </button>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <label class="form-label" for="topic">Tema de la sesión</label>
+
+    <div class="input-wrapper">
+      <input
+        id="topic"
+        class="form-input"
+        type="text"
+        [value]="topic"
+      />
+
+      <span class="input-icon">✎</span>
+    </div>
+
+    <p class="form-help">Ingresa el tema visto</p>
+  </section>
+
+  <section class="form-section">
+    <app-ui-progress-bar
+      label="Porcentaje de avance"
+      [value]="progress"
+    ></app-ui-progress-bar>
+  </section>
+
+  <section class="form-section hours-grid">
+    <div>
+      <label class="form-label" for="scheduledHours">Horas Programadas</label>
+
+      <div class="input-wrapper input-disabled">
+        <input
+          id="scheduledHours"
+          class="form-input"
+          type="text"
+          [value]="scheduledHours"
+          disabled
+        />
+
+        <span class="input-icon">✎</span>
+      </div>
+    </div>
+
+    <div>
+      <label class="form-label" for="realHours">Horas Reales</label>
+
+      <div class="input-wrapper">
+        <input
+          id="realHours"
+          class="form-input"
+          type="text"
+          [value]="realHours"
+        />
+
+        <span class="input-icon">✎</span>
+      </div>
+
+      <p class="form-help">Helper Text</p>
+    </div>
+  </section>
+
+  <footer class="form-actions">
+    <button
+      type="button"
+      class="action-button cancel-button"
+      (click)="onCancel()"
+    >
+      Cancelar
+      <span>⊗</span>
+    </button>
+
+    <button
+      type="button"
+      class="action-button accept-button"
+      (click)="onAccept()"
+    >
+      Aceptar
+      <span>✓</span>
+    </button>
+  </footer>
+</form>

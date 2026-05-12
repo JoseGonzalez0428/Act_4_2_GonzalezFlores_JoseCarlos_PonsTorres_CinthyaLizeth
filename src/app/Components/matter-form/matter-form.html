@@ -1,0 +1,64 @@
+<form class="matter-form">
+  <header class="form-header">
+    <div>
+      <h2 class="form-title">{{ title }}</h2>
+      <p class="form-date">{{ date }}</p>
+    </div>
+
+    <span class="form-info" aria-label="Información">i</span>
+  </header>
+
+  <section class="form-section">
+    <label class="form-label" for="matterName">Nombre de la materia</label>
+
+    <div class="input-wrapper">
+      <input
+        id="matterName"
+        class="form-input"
+        type="text"
+        [value]="matterName"
+      />
+
+      <span class="input-icon">✎</span>
+    </div>
+
+    <p class="form-help">Ingresa el nombre de la materia</p>
+  </section>
+
+  <section class="form-section">
+    <label class="form-label" for="groupName">Grupo</label>
+
+    <div class="input-wrapper">
+      <input
+        id="groupName"
+        class="form-input"
+        type="text"
+        [value]="groupName"
+      />
+
+      <span class="input-icon">✎</span>
+    </div>
+
+    <p class="form-help">Ingresa el nombre del grupo</p>
+  </section>
+
+  <footer class="form-actions">
+    <button
+      type="button"
+      class="action-button cancel-button"
+      (click)="onCancel()"
+    >
+      Cancelar
+      <span>⊗</span>
+    </button>
+
+    <button
+      type="button"
+      class="action-button accept-button"
+      (click)="onAccept()"
+    >
+      Aceptar
+      <span>✓</span>
+    </button>
+  </footer>
+</form>

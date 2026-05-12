@@ -1,0 +1,41 @@
+<section class="ui-calendar">
+  <header class="ui-calendar-header">
+    @for (day of days; track day) {
+      <button class="ui-calendar-day" type="button">
+        {{ day }}
+      </button>
+    }
+  </header>
+
+  <main class="ui-calendar-body">
+    @for (item of items; track $index) {
+      <article class="ui-calendar-cell">
+        <div class="ui-calendar-date">
+          <span class="ui-calendar-number">
+            {{ item.number }}
+          </span>
+
+          <span class="ui-calendar-info" aria-label="Información">
+            i
+          </span>
+        </div>
+
+        <p class="ui-calendar-description">
+          {{ item.description }}
+        </p>
+      </article>
+    }
+  </main>
+
+  <footer class="ui-calendar-footer">
+    <button class="ui-calendar-nav-button" type="button">
+      <span>Regresar</span>
+      <span class="ui-calendar-arrow left">←</span>
+    </button>
+
+    <button class="ui-calendar-nav-button" type="button">
+      <span>Siguiente</span>
+      <span class="ui-calendar-arrow">→</span>
+    </button>
+  </footer>
+</section>

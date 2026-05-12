@@ -122,6 +122,44 @@
     ></app-ui-card>
   </div>
 </section>
+
+<section class="preview-section">
+  <h2 class="preview-subtitle">Calendario</h2>
+
+  <app-ui-calendar></app-ui-calendar>
+</section>
+
+<section class="preview-section">
+  <h2 class="preview-subtitle">Footer UASLP</h2>
+
+  <app-ui-footer-uaslp></app-ui-footer-uaslp>
+</section>
+<router-outlet />
+
+<section class="preview-section">
+  <h2 class="preview-subtitle">Header UASLP</h2>
+
+  <app-ui-header-uaslp logoSrc="logo-png/aguilaa-logo.png"></app-ui-header-uaslp>
+</section>
+
+<section class="preview-section">
+  <h2 class="preview-subtitle">Header Materia</h2>
+
+  <app-ui-header-materia
+    title="Title"
+    semester="Semestre-2026/1"
+    group="Grupo-2026"
+  ></app-ui-header-materia>
+</section>
+
+<section class="preview-section">
+  <h2 class="preview-subtitle">Forms</h2>
+
+  <div class="preview-forms-grid">
+    <app-ui-activity-form></app-ui-activity-form>
+
+    <app-ui-matter-form></app-ui-matter-form>
+  </div>
+</section>
 </main>
 
-<router-outlet />

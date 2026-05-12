@@ -1,0 +1,13 @@
+<button 
+  class="btn"
+  [class]="'btn ' + variant"
+  [disabled]="variant === 'disabled'"
+  (click)="onClick()">
+  {{ label }}
+  <app-icon 
+    *ngIf="showIcon"
+    [name]="icon" 
+    [size]="20" 
+    [color]="getIconColor()">
+  </app-icon>
+</button>

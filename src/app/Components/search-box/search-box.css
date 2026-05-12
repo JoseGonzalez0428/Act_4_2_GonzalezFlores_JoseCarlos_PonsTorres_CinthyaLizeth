@@ -33,9 +33,9 @@
   text-align: center;
 }
 
-.search-icon {
-  font-size: 12px;
-  color: var(--border-primary);
-  flex-shrink: 0;
+
+.search-trigger {
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
 }

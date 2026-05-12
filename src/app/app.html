@@ -49,20 +49,18 @@
   <section class="preview-section">
     <h2 class="preview-subtitle">Badge</h2>
     <div class="preview-row">
-      <app-badge label="INFO" color="blue" variant="outline" />
-      <app-badge label="ÉXITO" color="green" variant="outline" />
-      <app-badge label="ALERTA" color="yellow" variant="outline" />
-      <app-badge label="ERROR" color="red" variant="outline" />
+      <app-badge label="INFO" color="blue" variant="outline" icon="info"></app-badge>
+      <app-badge label="INFO" color="blue" variant="filled" icon="info"></app-badge>
+      <app-badge label="ALERTA" color="yellow" variant="outline" icon="warning"></app-badge>
       
-      
+      <app-badge label="ALERTA" color="yellow" variant="filled" icon="warning"></app-badge>
+      <app-badge label="ERROR" color="red" variant="outline" icon="close"></app-badge>
+      <app-badge label="ERROR" color="red" variant="filled" icon="close"></app-badge>
 
+      <app-badge label="ÉXITO" color="green" variant="outline" icon="check"></app-badge>
+      <app-badge label="ÉXITO" color="green" variant="filled" icon="check"></app-badge>
       
-      <app-badge label="INFO" color="blue" variant="filled" />
-      <app-badge label="ÉXITO" color="green" variant="filled" />
-      <app-badge label="ALERTA" color="yellow" variant="filled" />
-      <app-badge label="ERROR" color="red" variant="filled" />
-
-      <app-badge label="DESHABILITADO" color="disabled" variant="outline" />
+      
       
     </div>
   </section>
@@ -74,42 +72,76 @@
   </section>
 
   <section class="preview-section">
-  <h2 class="preview-subtitle">Card</h2>
+    <h2 class="preview-subtitle">Card</h2>
 
-  <div class="preview-card-grid">
-    <app-ui-card
-      title="Title"
-      subtitle="Subtitle"
-      description="Texto"
-      progressLabel="Label"
-      [progressValue]="0"
-      buttonText="Button"
-      footerLabel="Label"
-      variant="primary"
-    ></app-ui-card>
+    <div class="preview-card-grid">
+      <app-ui-card
+        title="Title"
+        subtitle="Subtitle"
+        description="Texto"
+        progressLabel="Label"
+        [progressValue]="0"
+        buttonText="Button"
+        footerLabel="Label"
+        variant="primary"
+      ></app-ui-card>
 
-    <app-ui-card
-      title="Title"
-      subtitle="Subtitle"
-      description="Texto"
-      progressLabel="Label"
-      [progressValue]="0"
-      buttonText="Button"
-      footerLabel="Label"
-      variant="success"
-    ></app-ui-card>
+      <app-ui-card
+        title="Title"
+        subtitle="Subtitle"
+        description="Texto"
+        progressLabel="Label"
+        [progressValue]="0"
+        buttonText="Button"
+        footerLabel="Label"
+        variant="success"
+      ></app-ui-card>
 
-    <app-ui-card
-      title="Title"
-      subtitle="Subtitle"
-      description="Texto"
-      progressLabel="Label"
-      [progressValue]="0"
-      buttonText="Button"
-      footerLabel="Label"
-      variant="warning"
-    ></app-ui-card>
+      <app-ui-card
+        title="Title"
+        subtitle="Subtitle"
+        description="Texto"
+        progressLabel="Label"
+        [progressValue]="0"
+        buttonText="Button"
+        footerLabel="Label"
+        variant="warning"
+      ></app-ui-card>
 
+      <app-ui-card
+        title="Title"
+        subtitle="Subtitle"
+        description="Texto"
+        progressLabel="Label"
+        [progressValue]="0"
+        buttonText="Button"
+        footerLabel="Label"
+        variant="error"
+      ></app-ui-card>
+    </div>
+  </section>
+  <section class="preview-section">
+    <h2 class="preview-subtitle">Button</h2>
+    <div class="preview-row">
+      <app-button label="Button" variant="primary"></app-button>
+      <app-button label="Button" variant="primary-hover"></app-button>
+      <app-button label="Button" variant="primary-active"></app-button>
+      <app-button label="Button" variant="disabled"></app-button>
+      <app-button label="Button" variant="secondary"></app-button>
+      <app-button label="Button" variant="secondary-hover"></app-button>
+      <app-button label="Button" variant="secondary-active"></app-button>
+      <app-button label="Button" variant="success"></app-button>
+      <app-button label="Button" variant="warning"></app-button>
+      <app-button label="Button" variant="error"></app-button>
+      
+
+      <app-button label="Descargar" variant="primary" icon="download"></app-button>
+<app-button label="Buscar" variant="secondary" icon="search"></app-button>
+<app-button label="Editar" variant="success" icon="edit"></app-button>
+    </div>
+  </section>
+
+<<<<<<< HEAD
     <app-ui-card
       title="Title"
       subtitle="Subtitle"
@@ -161,5 +193,7 @@
     <app-ui-matter-form></app-ui-matter-form>
   </div>
 </section>
+=======
+>>>>>>> d42d40f9abcb3cc44b66780233aa634979e5d6f1
 </main>
 

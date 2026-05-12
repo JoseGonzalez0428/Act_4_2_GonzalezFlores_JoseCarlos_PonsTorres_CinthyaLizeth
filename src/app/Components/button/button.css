@@ -1,0 +1,167 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-width: 113px;
+  height: 52px;
+  border-radius: var(--radius-medium);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-size: var(--font-size-button);
+  font-weight: 900; 
+  letter-spacing: var(--letter-spacing-body-1); 
+  line-height: 100%;
+  text-align: center;
+  transition: background-color 300ms ease-out, box-shadow 300ms ease-out;
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* PRIMARY */
+.btn.primary {
+  background-color: var(--action-primary);
+  color: var(--surface-primary);
+}
+
+.btn.primary:hover {
+  background-color: var(--action-primary-hover);
+}
+
+.btn.primary-active {
+  background-color: var(--action-primary-active);
+  color: var(--surface-primary);
+  border: 1px solid var(--action-primary);
+  box-shadow: 0px 0px 0px 2px #ffffff inset;
+  min-width: 115px;
+  height: 54px;
+}
+
+/* DISABLED */
+.btn.disabled,
+.btn:disabled {
+  background-color: var(--state-disabled);
+  color: var(--surface-primary);
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+/* DISABLED */
+.btn.disabled,
+.btn:disabled {
+  background-color: var(--surface-neutral);
+  color: #D9D9D9;
+  cursor: not-allowed;
+}
+
+/* SECUNDARIO - Default */
+.btn.secondary {
+  background-color: var(--status-info-bg);
+  color: var(--action-primary);
+}
+
+.btn.secondary:hover {
+  background-color: var(--action-secondary-hover);
+}
+
+.btn.secondary:active {
+  background-color: #8FABDB;
+  border: 1px solid var(--action-primary);
+  box-shadow: 0px 0px 0px 2px #ffffff inset;
+  min-width: 115px;
+  height: 54px;
+}
+
+/* SUCCESS */
+.btn.success {
+  background-color: var(--status-success-bg);
+  color: var(--status-success-text);
+}
+
+.btn.success:hover {
+  background-color: #d4edda; /* no tiene hover definido en el sistema */
+}
+
+.btn.success:active {
+  background-color: var(--status-success-bg);
+  box-shadow: 0px 0px 0px 2px #ffffff inset;
+  min-width: 115px;
+  height: 54px;
+}
+
+/* WARNING */
+.btn.warning {
+  background-color: var(--status-warning-bg);
+  color: var(--status-warning-text);
+}
+
+.btn.warning:hover {
+  background-color: #fdefc3; /* no tiene hover definido en el sistema */
+}
+
+.btn.warning:active {
+  background-color: var(--status-warning-bg);
+  box-shadow: 0px 0px 0px 2px #ffffff inset;
+  min-width: 115px;
+  height: 54px;
+}
+
+/* ERROR */
+.btn.error {
+  background-color: var(--status-error-bg);
+  color: var(--status-error-text);
+}
+
+.btn.error:hover {
+  background-color: #fad4d4; /* no tiene hover definido en el sistema */
+}
+
+.btn.error:active {
+  background-color: var(--status-error-bg);
+  box-shadow: 0px 0px 0px 2px #ffffff inset;
+  min-width: 115px;
+  height: 54px;
+}
+
+
+/*PARA EL PREVIEW*/
+/* PRIMARY HOVER estático */
+.btn.primary-hover {
+  background-color: var(--action-primary-hover);
+  color: var(--surface-primary);
+}
+
+/* PRIMARY ACTIVE estático */
+.btn.primary-active {
+  background-color: var(--action-primary-active);
+  color: var(--surface-primary);
+  box-shadow: 0px 0px 0px 2px #ffffff inset;
+  min-width: 115px;
+  height: 54px;
+}
+
+/* SECONDARY HOVER estático */
+.btn.secondary-hover {
+  background-color: var(--action-secondary-hover);
+  color: var(--action-primary);
+}
+
+/* SECONDARY ACTIVE estático */
+.btn.secondary-active {
+  background-color: #8FABDB;
+  color: var(--action-primary);
+  border: 1px solid var(--action-primary);
+  box-shadow: 0px 0px 0px 2px #ffffff inset;
+  min-width: 115px;
+  height: 54px;
+}

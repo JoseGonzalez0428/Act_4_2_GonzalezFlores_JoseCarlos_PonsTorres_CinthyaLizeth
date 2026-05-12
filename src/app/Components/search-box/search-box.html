@@ -7,5 +7,7 @@
     (input)="onInput($event)"
     aria-label="Buscar"
   />
-  <span class="search-icon">&#128269;</span>
+  <span class="search-trigger" (click)="onSearchClick()">
+    <app-icon name="search" [size]="16" color="blue"></app-icon>
+  </span>
 </div>

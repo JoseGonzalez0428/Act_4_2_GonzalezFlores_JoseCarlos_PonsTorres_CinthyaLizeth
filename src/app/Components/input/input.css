@@ -21,7 +21,7 @@
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--radius-large);
   border: none;
-  border-top: 0.7px solid var(--border-primary);
+  border: 0.7px solid var(--border-primary);
   background-color: var(--surface-primary);
   min-width: 98px;
   height: 24px;
@@ -57,7 +57,7 @@
 /* DEFAULT */
 .input-box.default {
   background-color: var(--surface-primary);
-  border-top: 0.7px solid var(--border-primary);
+  border: 0.7px solid var(--border-primary);
 }
 
 /* ACTIVE - segundo */

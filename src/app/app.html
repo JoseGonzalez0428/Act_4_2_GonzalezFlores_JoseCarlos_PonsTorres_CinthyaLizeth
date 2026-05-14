@@ -17,6 +17,30 @@
     </div>
   </section>
 
+  <section>
+    <h2 class="preview-subtitle">Cell</h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+      <app-cell number="01" description="Description" color="blue" variant="outline"></app-cell>
+      <app-cell number="01" description="Description" color="blue" variant="filled"></app-cell>
+
+      <app-cell number="01" description="Description" color="blue" variant="dark"></app-cell>
+      <app-cell number="01" description="Description" color="green" variant="outline"></app-cell>
+
+      <app-cell number="01" description="Description" color="green" variant="filled"></app-cell>
+      <app-cell number="01" description="Description" color="green" variant="dark"></app-cell>
+
+      <app-cell number="01" description="Description" color="yellow" variant="outline"></app-cell>
+      <app-cell number="01" description="Description" color="yellow" variant="filled"></app-cell>
+
+      <app-cell number="01" description="Description" color="yellow" variant="dark"></app-cell>
+      <app-cell number="01" description="Description" color="red" variant="outline"></app-cell>
+
+      <app-cell number="01" description="Description" color="red" variant="filled"></app-cell>
+      <app-cell number="01" description="Description" color="red" variant="dark"></app-cell>
+    </div>
+  </section>
+
   <section class="preview-section">
   <h2 class="preview-subtitle">Progress Bar</h2>
 
@@ -186,7 +210,7 @@
   <h2 class="preview-subtitle">Input</h2>
 
   <app-input label="Text" placeholder="Placeholder" status="default"></app-input>
-  <app-input label="Text" placeholder="Input" status="active"></app-input>
+  <app-input label="Text" placeholder="Input" status="focus"></app-input>
   <app-input label="Text" placeholder="Placeholder" status="success"></app-input>
   <app-input label="Text" placeholder="Placeholder" status="warning"></app-input>
   <app-input label="Text" placeholder="Placeholder" status="error"></app-input>

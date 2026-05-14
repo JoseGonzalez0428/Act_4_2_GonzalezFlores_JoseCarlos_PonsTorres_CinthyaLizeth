@@ -1,0 +1,22 @@
+<div class="input-wrapper" [class]="status">
+  <label class="input-label">{{ label }}</label>
+  <div class="input-box" [class]="status" [class.focused]="isFocused">
+  <input
+    [placeholder]="placeholder"
+    [disabled]="status === 'disabled'"
+    (input)="onInput($event)"
+    (focus)="onFocus()"
+    (blur)="onBlur()"
+    class="input-field"
+  />
+    <app-icon 
+        [name]="icon" 
+        [size]="16" 
+        [color]="status === 'success' ? 'green' : 
+                status === 'warning' ? 'yellow' : 
+                status === 'error' ? 'red' : 
+                status === 'disabled' ? 'disabled' : 'blue'">
+    </app-icon>
+  </div>
+  <span class="input-helper">{{ helperText }}</span>
+</div>

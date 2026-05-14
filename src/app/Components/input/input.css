@@ -1,0 +1,141 @@
+.input-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input-label {
+  font-family: var(--font-main);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-caption);
+  line-height: 100%;
+  color: var(--action-primary);
+}
+
+.input-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-large);
+  border: none;
+  border-top: 0.7px solid var(--border-primary);
+  background-color: var(--surface-primary);
+  min-width: 98px;
+  height: 24px;
+  transition: border 300ms ease-out;
+}
+
+.input-field {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font-main);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-caption);
+  line-height: 100%;
+  color: var(--action-primary);
+  width: 100%;
+}
+
+.input-field::placeholder {
+  color: var(--action-primary);
+}
+
+.input-helper {
+  font-family: var(--font-main);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-caption);
+  line-height: 100%;
+  color: var(--text-muted);
+}
+
+/* DEFAULT */
+.input-box.default {
+  background-color: var(--surface-primary);
+  border-top: 0.7px solid var(--border-primary);
+}
+
+/* ACTIVE - segundo */
+.input-box.active {
+  background-color: var(--action-secondary-hover);
+  border: 1.2px solid var(--action-primary);
+}
+
+/* FOCUS - tercero */
+.input-box.focus {
+  background-color: var(--action-secondary);
+  border: 1.2px solid var(--action-primary);
+}
+
+/* SUCCESS - cuarto */
+.input-box.success {
+  background-color: var(--status-success-bg);
+  border: 1.3px solid var(--status-success-text);
+}
+.input-box.success .input-field,
+.input-box.success .input-field::placeholder {
+  color: var(--status-success-text);
+}
+
+/* WARNING - quinto */
+.input-box.warning {
+  background-color: var(--status-warning-bg);
+  border: 1.3px solid var(--status-warning-text);
+}
+.input-box.warning .input-field,
+.input-box.warning .input-field::placeholder {
+  color: var(--status-warning-text);
+}
+
+/* ERROR - sexto */
+.input-box.error {
+  background-color: var(--status-error-bg);
+  border: 1.3px solid var(--status-error-text);
+}
+.input-box.error .input-field,
+.input-box.error .input-field::placeholder {
+  color: var(--status-error-text);
+}
+
+/* DISABLED actualizado */
+.input-box.disabled {
+  background-color: #CECECE;
+  border: 1.3px solid #CECECE;
+}
+
+.input-box.disabled .input-field,
+.input-box.disabled .input-field::placeholder {
+  color: var(--surface-neutral);
+  cursor: not-allowed;
+}
+
+.input-box.default:hover {
+  background-color: var(--action-secondary-hover);
+}
+
+.input-box.focused {
+  background-color: var(--action-secondary);
+  border: 1.2px solid var(--action-primary);
+}
+
+/* Label colores según estado */
+.input-wrapper.success .input-label {
+  color: var(--status-success-text);
+}
+
+.input-wrapper.warning .input-label {
+  color: var(--status-warning-text);
+}
+
+.input-wrapper.error .input-label {
+  color: var(--status-error-text);
+}
+
+.input-wrapper.disabled .input-label {
+  color: var(--surface-neutral);
+}

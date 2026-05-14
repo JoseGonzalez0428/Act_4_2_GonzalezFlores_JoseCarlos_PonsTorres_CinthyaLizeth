@@ -19,7 +19,7 @@ export class IconComponent implements OnInit {
     'green': 'invert(35%) sepia(60%) saturate(500%) hue-rotate(115deg)',
     'yellow': 'invert(40%) sepia(80%) saturate(600%) hue-rotate(10deg)',
     'red': 'invert(25%) sepia(90%) saturate(800%) hue-rotate(340deg)',
-    'disabled': 'invert(80%) sepia(5%) saturate(200%) hue-rotate(180deg)',
+    'disabled': 'invert(95%) sepia(5%) saturate(100%) hue-rotate(180deg) brightness(98%)',
     'white': 'brightness(0) invert(1)',
   };
 

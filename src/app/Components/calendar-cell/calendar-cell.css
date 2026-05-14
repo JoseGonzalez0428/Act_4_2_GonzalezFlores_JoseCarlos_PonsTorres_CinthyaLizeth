@@ -1,0 +1,168 @@
+.cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  width: 214px;
+  height: 85px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-medium);
+  border: none;
+  border: 0.7px solid var(--border-primary);
+  background-color: var(--surface-primary);
+}
+
+.cell-date {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 83px;
+  height: 53px;
+  border-radius: var(--radius-small);
+  flex-shrink: 0;
+}
+
+.cell-number {
+  font-family: var(--font-main);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-caption);
+  line-height: 100%;
+}
+
+.cell-description {
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: var(--font-size-subtitle-1);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-subtitle-1);
+  line-height: 100%;
+}
+
+/* BLUE */
+.cell-date.blue.outline,.cell-date.blue.filled {
+  background-color: var(--action-primary);
+  color: var(--surface-primary);
+}
+
+.cell.blue .cell-description {
+  color: var(--action-primary);
+}
+.cell.blue.filled {
+  background-color: var(--status-info-bg);
+  border: 0.7px solid var(--action-primary);
+}
+
+/* GREEN */
+.cell-date.green.outline, .cell-date.green.filled {
+  background-color: var(--status-success-text);
+  color: var(--surface-primary);
+}
+
+.cell.green .cell-description {
+  color: var(--status-success-text);
+}
+.cell.green.filled {
+  background-color: var(--status-success-bg);
+  border: 0.7px solid var(--status-success-text);
+}
+
+.cell.green.outline{
+    border: 0.7px solid var(--status-success-text);
+}
+
+/* YELLOW */
+.cell-date.yellow.outline,.cell-date.yellow.filled {
+  background-color: var(--status-warning-text);
+  color: var(--surface-primary);
+}
+
+.cell.yellow .cell-description {
+  color: var(--status-warning-text);
+}
+.cell.yellow.filled {
+  background-color: var(--status-warning-bg);
+  border: 0.7px solid var(--status-warning-text);
+}
+
+.cell.yellow.outline{
+    border: 0.7px solid var(--status-warning-text);
+}
+
+/* RED */
+.cell-date.red.outline, .cell-date.red.filled {
+  background-color: var(--status-error-text);
+  color: var(--surface-primary);
+}
+.cell.red .cell-description {
+  color: var(--status-error-text);
+}
+.cell.red.filled {
+  background-color: var(--status-error-bg);
+  border: 0.7px solid var(--status-error-text);
+}
+
+.cell.red.outline{
+    border: 0.7px solid var(--status-error-text);
+}
+
+/* DISABLED */
+.cell-date.disabled.outline {
+  background-color: var(--state-disabled);
+  color: var(--surface-primary);
+}
+.cell.disabled .cell-description {
+  color: var(--state-disabled);
+}
+
+/* BLUE DARK */
+.cell.blue.dark {
+  background-color: var(--action-primary);
+  border-color: var(--action-primary);
+}
+.cell.blue.dark .cell-description {
+  color: var(--surface-primary);
+}
+.cell-date.blue.dark {
+  background-color: var(--status-info-bg);
+  color: var(--action-primary);
+}
+
+/* GREEN DARK */
+.cell.green.dark {
+  background-color: var(--status-success-text);
+  border-color: var(--status-success-text);
+}
+.cell.green.dark .cell-description {
+  color: var(--surface-primary);
+}
+.cell-date.green.dark {
+  background-color: var(--status-success-bg);
+  color: var(--status-success-text);
+}
+
+/* YELLOW DARK */
+.cell.yellow.dark {
+  background-color: var(--status-warning-text);
+  border-color: var(--status-warning-text);
+}
+.cell.yellow.dark .cell-description {
+  color: var(--surface-primary);
+}
+.cell-date.yellow.dark {
+  background-color: var(--status-warning-bg);
+  color: var(--status-warning-text);
+}
+
+/* RED DARK */
+.cell.red.dark {
+  background-color: var(--status-error-text);
+  border-color: var(--status-error-text);
+}
+.cell.red.dark .cell-description {
+  color: var(--surface-primary);
+}
+.cell-date.red.dark {
+  background-color: var(--status-error-bg);
+  color: var(--status-error-text);
+}

@@ -1,11 +1,3 @@
-<article class="cell" [class]="color + ' ' + variant">
-  <div class="cell-date" [class]="color + ' ' + variant">
-    <span class="cell-number">{{ number }}</span>
-    <app-icon 
-      name="info" 
-      [size]="14" 
-      [color]="variant === 'filled' ? 'white' : color">
-    </app-icon>
-  </div>
-  <p class="cell-description">{{ description }}</p>
-</article>
+<span class="cell" [class]="color + ' ' + variant">
+  {{ text }}
+</span>

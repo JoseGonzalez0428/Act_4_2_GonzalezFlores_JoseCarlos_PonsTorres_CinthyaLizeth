@@ -13,7 +13,8 @@ import { ActivityForm } from './Components/activity-form/activity-form';
 import { MatterForm } from './Components/matter-form/matter-form';
 import { ButtonComponent } from './Components/button/button';
 import { InputComponent } from './Components/input/input';
-import { CellComponent } from './Components/cell/cell';
+import { CalendarCellComponent } from './Components/calendar-cell/calendar-cell';
+
 
 @Component({
   selector: 'app-root',
@@ -32,7 +33,7 @@ import { CellComponent } from './Components/cell/cell';
     MatterForm,
     ButtonComponent,
     InputComponent,
-    CellComponent
+    CalendarCellComponent
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

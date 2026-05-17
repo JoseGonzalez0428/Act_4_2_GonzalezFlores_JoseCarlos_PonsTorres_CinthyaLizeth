@@ -19,11 +19,10 @@
 .ui-calendar-header {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 96px;
-
-  padding: 0 16px;
-  min-height: 140px;
-  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  min-height: auto;
+  align-items: center;
 }
 
 .ui-calendar-day {
@@ -49,11 +48,9 @@
 
 .ui-calendar-body {
   display: grid;
-  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 12px;
-
-  padding: 0 16px;
-  flex: 1;
+  padding: 16px;
   align-content: start;
 }
 

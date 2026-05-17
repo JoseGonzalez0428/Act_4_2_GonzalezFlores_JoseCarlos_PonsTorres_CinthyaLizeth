@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { HeaderUaslp } from '../header-uaslp/header-uaslp';
 import { FooterUaslp } from '../footer-uaslp/footer-uaslp';
 import { HeaderMateria } from '../header-materia/header-materia';
 import { Calendar } from '../calendar/calendar';
 import { CalendarCellComponent } from '../calendar-cell/calendar-cell';
 import { Badge } from '../badge/badge';
-import { ButtonComponent } from '../button/button';
+import { IconComponent } from '../icon/icon';
 import { ActivityForm } from '../activity-form/activity-form';
+import { ProgressBar } from '../progress-bar/progress-bar';
 import { Label } from '../label/label';
 
 @Component({
@@ -21,36 +23,31 @@ import { Label } from '../label/label';
     Calendar,
     CalendarCellComponent,
     Badge,
-    ButtonComponent,
-    Label,
-    ActivityForm
+    IconComponent,
+    ActivityForm,
+    ProgressBar,Label
   ],
   templateUrl: './calendar-view.html',
   styleUrl: './calendar-view.css'
 })
 export class CalendarViewComponent {
   showActivityForm: boolean = false;
-  selectedCell: any = null;
 
-  resumenCells = [
-    { number: '80', color: 'green', variant: 'filled' },
-    { number: '01', color: 'yellow', variant: 'filled' },
-    { number: '02', color: 'red', variant: 'filled' },
-    { number: '00', color: 'blue', variant: 'filled' },
-  ];
+  constructor(private router: Router) {}
 
-  openActivityForm(cell: any) {
-    this.selectedCell = cell;
+  goBack() {
+    this.router.navigate(['/dashboard']);
+  }
+
+  openActivityForm() {
     this.showActivityForm = true;
   }
 
   closeActivityForm() {
     this.showActivityForm = false;
-    this.selectedCell = null;
   }
 
   acceptActivityForm() {
     this.showActivityForm = false;
-    this.selectedCell = null;
   }
 }

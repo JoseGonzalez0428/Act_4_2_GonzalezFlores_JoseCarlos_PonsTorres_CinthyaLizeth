@@ -166,3 +166,19 @@
   background-color: var(--status-error-bg);
   color: var(--status-error-text);
 }
+
+.ui-calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 16px; /* era 96px */
+  padding: 16px;
+  min-height: auto;
+  align-items: center;
+}
+
+.ui-calendar-body {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  padding: 16px;
+}

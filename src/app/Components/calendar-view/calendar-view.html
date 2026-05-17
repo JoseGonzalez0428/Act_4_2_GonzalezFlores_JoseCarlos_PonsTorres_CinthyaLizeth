@@ -9,33 +9,53 @@
         title="Estructura de datos"
         semester="Semestre 2020-2027/1"
         group="Grupo 2720"
-        [showBackButton]="true">
+        [showBackButton]="true"
+        (backClick)="goBack()">
       </app-ui-header-materia>
 
-      <!-- RESUMEN -->
-      <section class="calendar-resumen">
+      <!-- RESUMEN + PROGRESS BAR -->
+      <section section class="calendar-resumen">
         <div class="resumen-label">
-          <app-ui-label text="Label" percent="56%" [showInfo]="true"></app-ui-label>
+            <app-ui-progress-bar 
+            label="Label" 
+            [value]="56" 
+            [showInfo]="true" 
+            [showPercent]="true">
+            </app-ui-progress-bar>
         </div>
 
-        <div class="resumen-cells">
-          <span class="resumen-title">RESUMEN</span>
-          <div class="resumen-items">
-            <app-calendar-cell number="80" description="" color="green" variant="filled"></app-calendar-cell>
-            <app-calendar-cell number="01" description="" color="yellow" variant="filled"></app-calendar-cell>
-            <app-calendar-cell number="02" description="" color="red" variant="filled"></app-calendar-cell>
-            <app-calendar-cell number="00" description="" color="blue" variant="filled"></app-calendar-cell>
-          </div>
-        </div>
-      </section>
+            <div class="resumen-cells">
+                <div class="resumen-items">
+                    <span class="resumen-title">RESUMEN</span>
+                    <div class="resumen-items-row">
+                    <div class="resumen-item green">
+                        <span>80</span>
+                        <app-icon name="info" [size]="14" color="white"></app-icon>
+                    </div>
+                    <div class="resumen-item yellow">
+                        <span>01</span>
+                        <app-icon name="info" [size]="14" color="white"></app-icon>
+                    </div>
+                    <div class="resumen-item red">
+                        <span>02</span>
+                        <app-icon name="info" [size]="14" color="white"></app-icon>
+                    </div>
+                    <div class="resumen-item blue-light">
+                        <span>00</span>
+                        <app-icon name="info" [size]="14" color="blue"></app-icon>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
       <!-- ESTADO -->
       <section class="calendar-estado">
         <span class="estado-label">ESTADO</span>
-        <app-badge label="Pendiente" color="blue" variant="outline" icon="info"></app-badge>
-        <app-badge label="Completada" color="green" variant="outline" icon="info"></app-badge>
-        <app-badge label="Incidencia" color="yellow" variant="outline" icon="info"></app-badge>
-        <app-badge label="Incompleta" color="red" variant="outline" icon="info"></app-badge>
+        <app-badge label="Pendiente" color="blue" variant="outline" icon="info" height="48px"></app-badge>
+    <app-badge label="Completada" color="green" variant="outline" icon="info" height="48px"></app-badge>
+    <app-badge label="Incidencia" color="yellow" variant="outline" icon="warning" height="48px"></app-badge>
+    <app-badge label="Incompleta" color="red" variant="outline" icon="close" height="48px"></app-badge>
       </section>
 
       <!-- CALENDARIO -->

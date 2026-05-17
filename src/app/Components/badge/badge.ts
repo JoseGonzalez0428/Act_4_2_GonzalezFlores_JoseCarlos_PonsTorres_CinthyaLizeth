@@ -14,4 +14,5 @@ export class Badge {
   @Input() color: 'blue' | 'green' | 'yellow' | 'red' | 'disabled' = 'blue';
   @Input() variant: 'outline' | 'filled' = 'outline';
   @Input() icon: string = 'info';
+  @Input() height: string = 'auto';
 }

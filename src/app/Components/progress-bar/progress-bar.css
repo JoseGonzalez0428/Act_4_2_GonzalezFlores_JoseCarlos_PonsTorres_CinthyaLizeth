@@ -82,6 +82,16 @@
   background-color: var(--state-disabled);
 }
 
+.progress-wrapper.full-width {
+  width: 100%;
+}
+
+.progress-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 /* Responsivo */
 @media (max-width: 719px) {
   .progress-wrapper {
@@ -90,7 +100,11 @@
   }
 
   .progress-header {
-    gap: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
   }
 
   .progress-track {

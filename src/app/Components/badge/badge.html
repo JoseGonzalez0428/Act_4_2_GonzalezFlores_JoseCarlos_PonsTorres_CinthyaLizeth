@@ -1,8 +1,8 @@
-<span class="badge" [class]="color + ' ' + variant">
+<span class="badge" [class]="color + ' ' + variant" [style.height]="height" [style.padding]="height !== 'auto' ? '0 20px' : ''">
   {{ label }}
   <app-icon 
     [name]="icon" 
-    [size]="18" 
+    [size]="18"
     [color]="variant === 'filled' ? 'white' : color">
   </app-icon>
 </span>

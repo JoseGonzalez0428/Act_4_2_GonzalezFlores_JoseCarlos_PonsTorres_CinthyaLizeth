@@ -8,34 +8,18 @@
   </header>
 
   <main class="ui-calendar-body">
-    @for (item of items; track $index) {
-      <article class="ui-calendar-cell">
-        <div class="ui-calendar-date">
-          <span class="ui-calendar-number">
-            {{ item.number }}
-          </span>
-
-          <span class="ui-calendar-info" aria-label="Información">
-            i
-          </span>
-        </div>
-
-        <p class="ui-calendar-description">
-          {{ item.description }}
-        </p>
-      </article>
-    }
-  </main>
+  @for (item of items; track $index) {
+    <app-calendar-cell
+      [number]="item.number"
+      [description]="item.description"
+      [color]="item.color || 'blue'"
+      [variant]="item.variant || 'outline'">
+    </app-calendar-cell>
+  }
+</main>
 
   <footer class="ui-calendar-footer">
-    <button class="ui-calendar-nav-button" type="button">
-      <span>Regresar</span>
-      <span class="ui-calendar-arrow left">←</span>
-    </button>
-
-    <button class="ui-calendar-nav-button" type="button">
-      <span>Siguiente</span>
-      <span class="ui-calendar-arrow">→</span>
-    </button>
-  </footer>
+  <app-button label="Regresar" variant="secondary" icon="arrow-left"></app-button>
+  <app-button label="Siguiente" variant="secondary" icon="arrow-right"></app-button>
+</footer>
 </section>

@@ -15,6 +15,7 @@ import { ButtonComponent } from './Components/button/button';
 import { InputComponent } from './Components/input/input';
 import { CalendarCellComponent } from './Components/calendar-cell/calendar-cell';
 import { DashboardView } from './Components/dashboard-view/dashboard-view';
+import { CellComponent } from './Components/cell/cell';
 
 
 @Component({
@@ -35,6 +36,7 @@ import { DashboardView } from './Components/dashboard-view/dashboard-view';
     ButtonComponent,
     InputComponent,
     CalendarCellComponent,
+    CellComponent,
     DashboardView
   ],
   templateUrl: './app.html',

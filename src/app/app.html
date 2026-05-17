@@ -17,29 +17,42 @@
     </div>
   </section>
 
-  <section class="preview-section">
-    <h2 class="preview-subtitle">Calendar Cell</h2>
+  <!-- Calendar Cell -->
+<section class="preview-section">
+  <h2 class="preview-subtitle">Calendar Cell</h2>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; width: fit-content;">
+    <app-calendar-cell number="01" description="Description" color="blue" variant="outline"></app-calendar-cell>
+    <app-calendar-cell number="01" description="Description" color="blue" variant="filled"></app-calendar-cell>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-      <app-cell number="01" description="Description" color="blue" variant="outline"></app-cell>
-      <app-cell number="01" description="Description" color="blue" variant="filled"></app-cell>
+    <app-calendar-cell number="01" description="Description" color="blue" variant="dark"></app-calendar-cell>
+    <app-calendar-cell number="01" description="Description" color="green" variant="outline"></app-calendar-cell>
 
-      <app-cell number="01" description="Description" color="blue" variant="dark"></app-cell>
-      <app-cell number="01" description="Description" color="green" variant="outline"></app-cell>
+    <app-calendar-cell number="01" description="Description" color="green" variant="filled"></app-calendar-cell>
+    <app-calendar-cell number="01" description="Description" color="green" variant="dark"></app-calendar-cell>
 
-      <app-cell number="01" description="Description" color="green" variant="filled"></app-cell>
-      <app-cell number="01" description="Description" color="green" variant="dark"></app-cell>
+    <app-calendar-cell number="01" description="Description" color="yellow" variant="outline"></app-calendar-cell>
+    <app-calendar-cell number="01" description="Description" color="yellow" variant="filled"></app-calendar-cell>
 
-      <app-cell number="01" description="Description" color="yellow" variant="outline"></app-cell>
-      <app-cell number="01" description="Description" color="yellow" variant="filled"></app-cell>
+    <app-calendar-cell number="01" description="Description" color="yellow" variant="dark"></app-calendar-cell>
+    <app-calendar-cell number="01" description="Description" color="red" variant="outline"></app-calendar-cell>
 
-      <app-cell number="01" description="Description" color="yellow" variant="dark"></app-cell>
-      <app-cell number="01" description="Description" color="red" variant="outline"></app-cell>
+    <app-calendar-cell number="01" description="Description" color="red" variant="filled"></app-calendar-cell>
+    <app-calendar-cell number="01" description="Description" color="red" variant="dark"></app-calendar-cell>
+  </div>
+</section>
 
-      <app-cell number="01" description="Description" color="red" variant="filled"></app-cell>
-      <app-cell number="01" description="Description" color="red" variant="dark"></app-cell>
-    </div>
-  </section>
+<!-- Cell -->
+<section class="preview-section">
+  <h2 class="preview-subtitle">Cell</h2>
+  <div style="display: flex; flex-direction: column; gap: 8px; width: fit-content;">
+    <app-cell text="Texto" color="blue" variant="outline"></app-cell>
+    <app-cell text="Texto" color="blue" variant="filled"></app-cell>
+    <app-cell text="Texto" color="green" variant="outline"></app-cell>
+    <app-cell text="Texto" color="yellow" variant="outline"></app-cell>
+    <app-cell text="Texto" color="red" variant="outline"></app-cell>
+    <app-cell text="Texto" color="disabled" variant="outline"></app-cell>
+  </div>
+</section>
 
   <section class="preview-section">
   <h2 class="preview-subtitle">Progress Bar</h2>

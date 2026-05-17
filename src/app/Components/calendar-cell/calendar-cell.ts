@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IconComponent } from '../icon/icon';
 
 @Component({
-  selector: 'app-cell',
+  selector: 'app-calendar-cell',
   standalone: true,
   imports: [CommonModule, IconComponent],
   templateUrl: './calendar-cell.html',

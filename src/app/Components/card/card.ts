@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ProgressBar } from '../progress-bar/progress-bar';
 
 @Component({
@@ -19,6 +19,8 @@ export class Card {
 
   @Input() variant: 'primary' | 'success' | 'warning' | 'error' = 'primary';
 
+  @Output() footerClick = new EventEmitter<void>();
+
   get progressVariant(): 'primary' | 'success' | 'error' {
     if (this.variant === 'success') {
       return 'success';
@@ -29,5 +31,9 @@ export class Card {
     }
 
     return 'primary';
+  }
+
+  onFooterClick() {
+    this.footerClick.emit();
   }
 }

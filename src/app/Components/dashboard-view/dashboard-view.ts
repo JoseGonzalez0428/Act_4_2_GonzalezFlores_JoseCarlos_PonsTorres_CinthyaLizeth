@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-
 import { HeaderUaslp } from '../header-uaslp/header-uaslp';
 import { FooterUaslp } from '../footer-uaslp/footer-uaslp';
 import { Card } from '../card/card';
 import { MatterForm } from '../matter-form/matter-form';
 import { SearchBoxComponent } from '../search-box/search-box';
+import { Router } from '@angular/router';
 
 type CourseCard = {
   title: string;
@@ -19,18 +19,22 @@ type CourseCard = {
 
 @Component({
   selector: 'app-dashboard-view',
-  standalone: true,
   imports: [
     HeaderUaslp,
     FooterUaslp,
     Card,
     MatterForm,
-    SearchBoxComponent
+    SearchBoxComponent,
   ],
   templateUrl: './dashboard-view.html',
   styleUrl: './dashboard-view.css'
 })
+
 export class DashboardView {
+  constructor(private router: Router) {}
+  goToCalendar() {
+    this.router.navigate(['/calendario']);
+  }
   showMatterForm = false;
 
   courses: CourseCard[] = [

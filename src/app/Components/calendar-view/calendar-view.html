@@ -1,0 +1,59 @@
+<div class="calendar-view">
+  <div class="calendar-view-content" [class.calendar-view-blur]="showActivityForm">
+
+    <app-ui-header-uaslp logoSrc="logo-png/uaslp-logo.png"></app-ui-header-uaslp>
+
+    <main class="calendar-main">
+
+      <app-ui-header-materia
+        title="Estructura de datos"
+        semester="Semestre 2020-2027/1"
+        group="Grupo 2720"
+        [showBackButton]="true">
+      </app-ui-header-materia>
+
+      <!-- RESUMEN -->
+      <section class="calendar-resumen">
+        <div class="resumen-label">
+          <app-ui-label text="Label" percent="56%" [showInfo]="true"></app-ui-label>
+        </div>
+
+        <div class="resumen-cells">
+          <span class="resumen-title">RESUMEN</span>
+          <div class="resumen-items">
+            <app-calendar-cell number="80" description="" color="green" variant="filled"></app-calendar-cell>
+            <app-calendar-cell number="01" description="" color="yellow" variant="filled"></app-calendar-cell>
+            <app-calendar-cell number="02" description="" color="red" variant="filled"></app-calendar-cell>
+            <app-calendar-cell number="00" description="" color="blue" variant="filled"></app-calendar-cell>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESTADO -->
+      <section class="calendar-estado">
+        <span class="estado-label">ESTADO</span>
+        <app-badge label="Pendiente" color="blue" variant="outline" icon="info"></app-badge>
+        <app-badge label="Completada" color="green" variant="outline" icon="info"></app-badge>
+        <app-badge label="Incidencia" color="yellow" variant="outline" icon="info"></app-badge>
+        <app-badge label="Incompleta" color="red" variant="outline" icon="info"></app-badge>
+      </section>
+
+      <!-- CALENDARIO -->
+      <app-ui-calendar></app-ui-calendar>
+
+    </main>
+
+    <app-ui-footer-uaslp></app-ui-footer-uaslp>
+  </div>
+
+  @if (showActivityForm) {
+    <div class="modal-backdrop">
+      <div class="modal-content">
+        <app-ui-activity-form
+          (cancelClick)="closeActivityForm()"
+          (acceptClick)="acceptActivityForm()">
+        </app-ui-activity-form>
+      </div>
+    </div>
+  }
+</div>

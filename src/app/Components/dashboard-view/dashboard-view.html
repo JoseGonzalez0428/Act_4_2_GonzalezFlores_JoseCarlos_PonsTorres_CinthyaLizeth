@@ -1,0 +1,93 @@
+<div class="dashboard-page">
+  <div
+    class="dashboard-content"
+    [class.dashboard-content-blur]="showMatterForm"
+  >
+    <app-ui-header-uaslp logoSrc="logo-png/uaslp-logo.png"></app-ui-header-uaslp>
+
+    <main class="dashboard-main">
+      <section class="dashboard-controls">
+        <div class="search-area">
+          <app-search-box></app-search-box>
+        </div>
+
+        <button
+          class="add-subject-button"
+          type="button"
+          (click)="openMatterForm()"
+        >
+          Agregar Materia
+          <span class="add-icon">＋</span>
+        </button>
+
+        <div class="filters-area">
+          <div class="filter-field">
+            <label>Carrera</label>
+
+            <div class="filter-input">
+              <span>Computacion</span>
+              <span>✎</span>
+            </div>
+
+            <small>Carrera</small>
+          </div>
+
+          <div class="filter-field">
+            <label>Grupo</label>
+
+            <div class="filter-input">
+              <span>2026</span>
+              <span>✎</span>
+            </div>
+
+            <small>Grupo</small>
+          </div>
+
+          <div class="filter-field">
+            <label>Semestre</label>
+
+            <div class="filter-input">
+              <span>2026/1</span>
+              <span>✎</span>
+            </div>
+
+            <small>Semestre</small>
+          </div>
+
+          <button class="apply-button" type="button">
+            Aplicar
+            <span>▽</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="cards-section">
+        @for (course of courses; track $index) {
+          <app-ui-card
+            [title]="course.title"
+            [subtitle]="course.subtitle"
+            [description]="course.description"
+            [progressLabel]="course.progressLabel"
+            [progressValue]="course.progressValue"
+            [buttonText]="course.buttonText"
+            [footerLabel]="course.footerLabel"
+            [variant]="course.variant"
+          ></app-ui-card>
+        }
+      </section>
+    </main>
+
+    <app-ui-footer-uaslp></app-ui-footer-uaslp>
+  </div>
+
+  @if (showMatterForm) {
+    <div class="modal-backdrop">
+      <div class="modal-content">
+        <app-ui-matter-form
+          (cancelClick)="closeMatterForm()"
+          (acceptClick)="acceptMatterForm()"
+        ></app-ui-matter-form>
+      </div>
+    </div>
+  }
+</div>

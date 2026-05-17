@@ -14,6 +14,7 @@ import { MatterForm } from './Components/matter-form/matter-form';
 import { ButtonComponent } from './Components/button/button';
 import { InputComponent } from './Components/input/input';
 import { CalendarCellComponent } from './Components/calendar-cell/calendar-cell';
+import { DashboardView } from './Components/dashboard-view/dashboard-view';
 
 
 @Component({
@@ -33,7 +34,8 @@ import { CalendarCellComponent } from './Components/calendar-cell/calendar-cell'
     MatterForm,
     ButtonComponent,
     InputComponent,
-    CalendarCellComponent
+    CalendarCellComponent,
+    DashboardView
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

@@ -228,3 +228,7 @@
     height: 34px;
   }
 }
+
+app-calendar-cell {
+  cursor: pointer;
+}

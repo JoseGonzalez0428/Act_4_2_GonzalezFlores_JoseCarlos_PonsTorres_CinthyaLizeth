@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CalendarCellComponent } from '../calendar-cell/calendar-cell';
 import { ButtonComponent } from '../button/button';
 import { IconComponent } from '../icon/icon';
@@ -21,6 +21,12 @@ export class Calendar {
   @Input() days: string[] = [
     'LUNES', 'MARTES', 'MIERCOLES', 'JUEVES', 'VIERNES', 'SABADO', 'DOMINGO'
   ];
+
+  @Output() cellClick = new EventEmitter<any>();
+
+  onCellClick(item: any) {
+    this.cellClick.emit(item);
+  }
 
   @Input() items: CalendarDay[] = [
     { number: '01', description: 'Description', color: 'blue', variant: 'outline' },

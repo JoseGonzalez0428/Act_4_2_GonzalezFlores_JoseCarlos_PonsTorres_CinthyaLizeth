@@ -7,13 +7,14 @@
     }
   </header>
 
-  <main class="ui-calendar-body">
+<main class="ui-calendar-body">
   @for (item of items; track $index) {
     <app-calendar-cell
       [number]="item.number"
       [description]="item.description"
       [color]="item.color || 'blue'"
-      [variant]="item.variant || 'outline'">
+      [variant]="item.variant || 'outline'"
+      (click)="onCellClick(item)">
     </app-calendar-cell>
   }
 </main>

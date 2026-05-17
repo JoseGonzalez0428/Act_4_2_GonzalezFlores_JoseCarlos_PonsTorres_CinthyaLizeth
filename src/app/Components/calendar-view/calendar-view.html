@@ -53,13 +53,13 @@
       <section class="calendar-estado">
         <span class="estado-label">ESTADO</span>
         <app-badge label="Pendiente" color="blue" variant="outline" icon="info" height="48px"></app-badge>
-    <app-badge label="Completada" color="green" variant="outline" icon="info" height="48px"></app-badge>
-    <app-badge label="Incidencia" color="yellow" variant="outline" icon="warning" height="48px"></app-badge>
-    <app-badge label="Incompleta" color="red" variant="outline" icon="close" height="48px"></app-badge>
+        <app-badge label="Completada" color="green" variant="outline" icon="info" height="48px"></app-badge>
+        <app-badge label="Incidencia" color="yellow" variant="outline" icon="warning" height="48px"></app-badge>
+        <app-badge label="Incompleta" color="red" variant="outline" icon="close" height="48px"></app-badge>
       </section>
 
       <!-- CALENDARIO -->
-      <app-ui-calendar></app-ui-calendar>
+      <app-ui-calendar (cellClick)="openActivityForm($event)"></app-ui-calendar>
 
     </main>
 

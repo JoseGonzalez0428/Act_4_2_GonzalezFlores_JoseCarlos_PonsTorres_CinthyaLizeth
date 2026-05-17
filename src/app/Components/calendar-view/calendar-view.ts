@@ -39,7 +39,7 @@ export class CalendarViewComponent {
     this.router.navigate(['/dashboard']);
   }
 
-  openActivityForm() {
+  openActivityForm(cell?: any) {
     this.showActivityForm = true;
   }
 

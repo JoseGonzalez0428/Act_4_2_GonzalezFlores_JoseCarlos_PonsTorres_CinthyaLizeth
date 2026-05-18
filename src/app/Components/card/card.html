@@ -35,12 +35,14 @@
   </section>
 
   <footer class="ui-card-footer">
-    <button class="ui-card-button" type="button">
-      <span>{{ buttonText }}</span>
-      <span class="ui-card-button-icon">↓</span>
-    </button>
+    <app-button
+      [label]="buttonText"
+      icon="download"
+      [variant]="buttonVariant"
+      [showIcon]="true"
+    ></app-button>
 
-    <button class="ui-card-link" type="button" (click)="onFooterClick()">
+    <button class="ui-card-link" type="button">
       <span>{{ footerLabel }}</span>
       <span class="ui-card-link-icon">→</span>
     </button>

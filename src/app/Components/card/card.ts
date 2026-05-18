@@ -1,10 +1,11 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ProgressBar } from '../progress-bar/progress-bar';
+import { ButtonComponent } from '../button/button';
 
 @Component({
   selector: 'app-ui-card',
   standalone: true,
-  imports: [ProgressBar],
+  imports: [ProgressBar, ButtonComponent],
   templateUrl: './card.html',
   styleUrl: './card.css'
 })
@@ -19,8 +20,6 @@ export class Card {
 
   @Input() variant: 'primary' | 'success' | 'warning' | 'error' = 'primary';
 
-  @Output() footerClick = new EventEmitter<void>();
-
   get progressVariant(): 'primary' | 'success' | 'error' {
     if (this.variant === 'success') {
       return 'success';
@@ -33,7 +32,7 @@ export class Card {
     return 'primary';
   }
 
-  onFooterClick() {
-    this.footerClick.emit();
+  get buttonVariant(): 'primary' | 'success' | 'warning' | 'error' {
+    return this.variant;
   }
 }

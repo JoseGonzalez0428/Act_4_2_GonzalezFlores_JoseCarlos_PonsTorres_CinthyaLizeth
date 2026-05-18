@@ -93,46 +93,28 @@
   width: 100%;
 }
 
+/* =========================
+   FOOTER
+   ========================= */
+
 .ui-card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  border: 1px solid currentColor;
+  border-top: 1px solid currentColor;
   padding: 8px 16px;
+
+  min-height: 48px;
 }
 
-.ui-card-button {
-  min-width: 72px;
-  height: 32px;
-
+/* Botón reutilizado dentro de la card */
+.ui-card-footer app-button {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 6px;
-
-  border: none;
-  border-radius: var(--radius-small);
-
-  background-color: currentColor;
-  color: var(--surface-primary);
-
-  font-size: var(--font-size-button);
-  font-weight: var(--font-weight-medium);
-  letter-spacing: var(--letter-spacing-button);
-
-  cursor: pointer;
 }
 
-.ui-card-button span {
-  color: var(--surface-primary);
-}
-
-.ui-card-button-icon {
-  font-size: 16px;
-  line-height: 1;
-}
-
+/* Link derecho de la card */
 .ui-card-link {
   min-width: 72px;
   height: 32px;
@@ -160,6 +142,10 @@
   line-height: 1;
 }
 
+.ui-card-link:hover {
+  opacity: 0.85;
+}
+
 /* Variante azul */
 .ui-card-primary {
   color: var(--action-primary);
@@ -178,15 +164,6 @@
 /* Variante roja */
 .ui-card-error {
   color: var(--status-error-text);
-}
-
-/* Hover básico */
-.ui-card-button:hover {
-  opacity: 0.9;
-}
-
-.ui-card-link:hover {
-  opacity: 0.85;
 }
 
 /* Responsivo */

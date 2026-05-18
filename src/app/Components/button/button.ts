@@ -4,6 +4,7 @@ import { IconComponent } from '../icon/icon';
 
 @Component({
   selector: 'app-button',
+  standalone: true,
   imports: [CommonModule, IconComponent],
   templateUrl: './button.html',
   styleUrl: './button.css'

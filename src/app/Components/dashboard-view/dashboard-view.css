@@ -29,119 +29,81 @@
 
 /* =========================
    CONTROLES SUPERIORES
+   Solo acomoda componentes.
    ========================= */
 
 .dashboard-controls {
-  display: grid;
-  grid-template-columns: minmax(220px, 280px) minmax(170px, 190px) minmax(420px, 1fr);
-  align-items: start;
-  gap: 32px;
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 48px;
+
   margin-bottom: 48px;
 }
 
+.left-controls {
+  display: flex;
+  align-items: flex-start;
+  gap: 56px;
+  flex-shrink: 0;
+}
+
 .search-area {
+  width: 280px;
+  min-width: 280px;
+}
+
+.search-area app-search-box {
+  display: block;
   width: 100%;
 }
 
-.add-subject-button {
-  height: 48px;
+.add-button-area {
+  width: 180px;
   min-width: 180px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-
-  border: none;
-  border-radius: var(--radius-small);
-
-  background-color: var(--status-success-bg);
-  color: var(--status-success-text);
-
-  font-size: var(--font-size-button);
-  font-weight: var(--font-weight-medium);
-  letter-spacing: var(--letter-spacing-button);
-
-  cursor: pointer;
 }
 
-.add-subject-button:hover {
-  opacity: 0.9;
-}
-
-.add-icon {
-  font-size: 24px;
-  line-height: 1;
+.add-button-area app-button {
+  display: block;
+  width: 100%;
 }
 
 .filters-area {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
   justify-content: flex-end;
-  flex-wrap: wrap;
+  gap: 16px;
+
   min-width: 0;
+  flex-shrink: 1;
 }
 
-.filter-field {
+.filters-area app-input {
+  display: block;
+}
+
+.filters-area app-input:nth-child(1) {
   width: 120px;
-  min-width: 100px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
 }
 
-.filter-field label {
-  font-size: var(--font-size-caption);
-  color: var(--action-primary);
+.filters-area app-input:nth-child(2) {
+  width: 90px;
 }
 
-.filter-input {
-  height: 48px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-
-  padding: 0 12px;
-
-  border: 1px solid var(--action-primary-hover);
-  border-radius: var(--radius-small);
-
-  background-color: var(--surface-primary);
-  color: var(--action-primary);
-
-  font-size: var(--font-size-caption);
+.filters-area app-input:nth-child(3) {
+  width: 120px;
 }
 
-.filter-field small {
-  font-size: 10px;
-  color: var(--text-muted);
-}
-
-.apply-button {
-  height: 48px;
-  min-width: 96px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-
+.apply-button-area {
+  width: 96px;
   margin-top: 21px;
+}
 
-  border: none;
-  border-radius: var(--radius-small);
-
-  background-color: var(--status-info-bg);
-  color: var(--action-primary);
-
-  font-size: var(--font-size-button);
-  font-weight: var(--font-weight-medium);
-
-  cursor: pointer;
-  flex-shrink: 0;
+.apply-button-area app-button {
+  display: block;
+  width: 100%;
 }
 
 /* =========================
@@ -194,16 +156,32 @@
 
 @media (max-width: 1023px) {
   .dashboard-main {
-    padding: 40px var(--screen-padding-tablet);
+    padding: 40px 32px;
   }
 
   .dashboard-controls {
-    grid-template-columns: 1fr 180px;
+    flex-direction: column;
     gap: 24px;
   }
 
+  .left-controls {
+    width: 100%;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .search-area {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .add-button-area {
+    width: 180px;
+    min-width: 180px;
+  }
+
   .filters-area {
-    grid-column: 1 / -1;
+    width: 100%;
     justify-content: flex-start;
     flex-wrap: wrap;
   }
@@ -219,31 +197,45 @@
 
 @media (max-width: 719px) {
   .dashboard-main {
-    padding: 24px var(--screen-padding-mobile);
+    padding: 24px 16px;
   }
 
   .dashboard-controls {
-    grid-template-columns: 1fr;
     gap: 20px;
     margin-bottom: 32px;
   }
 
-  .add-subject-button {
+  .left-controls {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .search-area,
+  .add-button-area {
     width: 100%;
+    min-width: 0;
   }
 
   .filters-area {
     flex-direction: column;
     width: 100%;
+    gap: 16px;
   }
 
-  .filter-field {
+  .filters-area app-input,
+  .filters-area app-input:nth-child(1),
+  .filters-area app-input:nth-child(2),
+  .filters-area app-input:nth-child(3) {
     width: 100%;
   }
 
-  .apply-button {
+  .apply-button-area {
     width: 100%;
     margin-top: 0;
+  }
+
+  .apply-button-area app-button {
+    width: 100%;
   }
 
   .cards-section {
@@ -254,13 +246,4 @@
     align-items: flex-start;
     padding: 16px;
   }
-}
-
-.search-area {
-  min-width: 0;
-}
-
-.search-area app-search-box {
-  display: block;
-  width: 100%;
 }

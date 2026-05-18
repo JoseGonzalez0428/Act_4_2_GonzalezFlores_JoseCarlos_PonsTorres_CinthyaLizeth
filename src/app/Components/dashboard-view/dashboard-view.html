@@ -7,57 +7,52 @@
 
     <main class="dashboard-main">
       <section class="dashboard-controls">
-        <div class="search-area">
-          <app-search-box></app-search-box>
+        <div class="left-controls">
+          <div class="search-area">
+            <app-search-box></app-search-box>
+          </div>
+
+          <div class="add-button-area">
+            <app-button
+              label="Agregar Materia"
+              icon="add"
+              variant="success"
+              [showIcon]="true"
+              (clicked)="openMatterForm()"
+            ></app-button>
+          </div>
         </div>
 
-        <button
-          class="add-subject-button"
-          type="button"
-          (click)="openMatterForm()"
-        >
-          Agregar Materia
-          <span class="add-icon">＋</span>
-        </button>
-
         <div class="filters-area">
-          <div class="filter-field">
-            <label>Carrera</label>
+          <app-input
+            label="Carrera"
+            placeholder="Computacion"
+            helperText="Carrera"
+            icon="edit"
+          ></app-input>
 
-            <div class="filter-input">
-              <span>Computacion</span>
-              <span>✎</span>
-            </div>
+          <app-input
+            label="Grupo"
+            placeholder="2026"
+            helperText="Grupo"
+            icon="edit"
+          ></app-input>
 
-            <small>Carrera</small>
+          <app-input
+            label="Semestre"
+            placeholder="2026/1"
+            helperText="Semestre"
+            icon="edit"
+          ></app-input>
+
+          <div class="apply-button-area">
+            <app-button
+              label="Aplicar"
+              icon="filter"
+              variant="secondary"
+              [showIcon]="true"
+            ></app-button>
           </div>
-
-          <div class="filter-field">
-            <label>Grupo</label>
-
-            <div class="filter-input">
-              <span>2026</span>
-              <span>✎</span>
-            </div>
-
-            <small>Grupo</small>
-          </div>
-
-          <div class="filter-field">
-            <label>Semestre</label>
-
-            <div class="filter-input">
-              <span>2026/1</span>
-              <span>✎</span>
-            </div>
-
-            <small>Semestre</small>
-          </div>
-
-          <button class="apply-button" type="button">
-            Aplicar
-            <span>▽</span>
-          </button>
         </div>
       </section>
 
@@ -72,7 +67,6 @@
             [buttonText]="course.buttonText"
             [footerLabel]="course.footerLabel"
             [variant]="course.variant"
-            (footerClick)="goToCalendar()"
           ></app-ui-card>
         }
       </section>

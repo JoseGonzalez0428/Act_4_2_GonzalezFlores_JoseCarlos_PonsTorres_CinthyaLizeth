@@ -1,7 +1,9 @@
-<img 
-  [src]="'icons/' + name + '.svg'"
+<span
+  class="ui-icon"
   [style.width.px]="size"
   [style.height.px]="size"
-  [style.filter]="cssFilter"
-  [alt]="name"
-/>
+  [style.font-size.px]="size"
+  [style.color]="iconColor"
+>
+  {{ iconSymbol }}
+</span>

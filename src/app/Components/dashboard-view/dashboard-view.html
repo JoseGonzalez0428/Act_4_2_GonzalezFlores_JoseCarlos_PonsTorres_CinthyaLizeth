@@ -48,7 +48,7 @@
           <div class="apply-button-area">
             <app-button
               label="Aplicar"
-              icon="filter"
+              icon="filer"
               variant="secondary"
               [showIcon]="true"
             ></app-button>
@@ -79,9 +79,9 @@
     <div class="modal-backdrop">
       <div class="modal-content">
         <app-ui-matter-form
-          (cancelClick)="closeMatterForm()"
-          (acceptClick)="acceptMatterForm()"
-        ></app-ui-matter-form>
+        (cancelClick)="closeMatterForm()"
+        (acceptClick)="acceptMatterForm($event)"
+      ></app-ui-matter-form>
       </div>
     </div>
   }

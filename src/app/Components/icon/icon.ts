@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,39 +8,22 @@ import { CommonModule } from '@angular/common';
   templateUrl: './icon.html',
   styleUrl: './icon.css'
 })
-export class IconComponent {
+export class IconComponent implements OnInit {
   @Input() name: string = '';
   @Input() size: number = 20;
   @Input() color: string = 'currentColor';
+  cssFilter: string = '';
 
-  get iconSymbol(): string {
-    const icons: { [key: string]: string } = {
-      add: '+',
-      edit: '✎',
-      filter: '▽',
-      download: '↓',
-      arrow: '→',
-      back: '←',
-      info: 'i',
-      close: '⊗',
-      check: '✓',
-      search: '⌕'
-    };
+  private colorToFilter: {[key: string]: string} = {
+    'blue': 'invert(15%) sepia(80%) saturate(1200%) hue-rotate(195deg) brightness(85%)',
+    'green': 'invert(35%) sepia(60%) saturate(500%) hue-rotate(115deg)',
+    'yellow': 'invert(40%) sepia(80%) saturate(600%) hue-rotate(10deg)',
+    'red': 'invert(25%) sepia(90%) saturate(800%) hue-rotate(340deg)',
+    'disabled': 'invert(95%) sepia(5%) saturate(100%) hue-rotate(180deg) brightness(98%)',
+    'white': 'brightness(0) invert(1)',
+  };
 
-    return icons[this.name] || '';
-  }
-
-  get iconColor(): string {
-    const colors: { [key: string]: string } = {
-      blue: 'var(--action-primary)',
-      green: 'var(--status-success-text)',
-      yellow: 'var(--status-warning-text)',
-      red: 'var(--status-error-text)',
-      disabled: 'var(--state-disabled)',
-      white: 'var(--surface-primary)',
-      currentColor: 'currentColor'
-    };
-
-    return colors[this.color] || this.color;
+  ngOnInit() {
+    this.cssFilter = this.colorToFilter[this.color] || '';
   }
 }

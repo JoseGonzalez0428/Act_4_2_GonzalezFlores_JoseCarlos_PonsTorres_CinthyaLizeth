@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { HeaderUaslp } from '../header-uaslp/header-uaslp';
 import { FooterUaslp } from '../footer-uaslp/footer-uaslp';
 import { Card } from '../card/card';
-import { MatterForm } from '../matter-form/matter-form';
+import { MatterForm, MatterFormData } from '../matter-form/matter-form';
 import { SearchBoxComponent } from '../search-box/search-box';
 import { ButtonComponent } from '../button/button';
 import { InputComponent } from '../input/input';
@@ -128,18 +128,21 @@ export class DashboardView {
     this.showMatterForm = false;
   }
 
-  acceptMatterForm(): void {
-    this.showMatterForm = false;
+  acceptMatterForm(data: MatterFormData): void {
+  const matterName = data.matterName || 'Nueva Materia';
+  const groupName = data.groupName || '2026';
 
-    this.courses.push({
-      title: 'Nueva Materia',
-      subtitle: 'Grupo 2026',
-      description: 'Texto',
-      progressLabel: 'Label',
-      progressValue: 0,
-      buttonText: 'Button',
-      footerLabel: 'Label',
-      variant: 'success'
-    });
-  }
+  this.showMatterForm = false;
+
+  this.courses.push({
+    title: matterName,
+    subtitle: `Grupo ${groupName}`,
+    description: 'Texto',
+    progressLabel: 'Label',
+    progressValue: 0,
+    buttonText: 'Button',
+    footerLabel: 'Label',
+    variant: 'success'
+  });
+}
 }

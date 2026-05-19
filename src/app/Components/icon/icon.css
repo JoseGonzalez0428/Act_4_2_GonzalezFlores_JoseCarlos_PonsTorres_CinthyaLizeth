@@ -1,12 +1,4 @@
-.ui-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  font-family: var(--font-main);
-  font-weight: var(--font-weight-medium);
-  line-height: 1;
-
-  flex-shrink: 0;
-  user-select: none;
+img {
+  display: inline-block;
+  vertical-align: middle;
 }

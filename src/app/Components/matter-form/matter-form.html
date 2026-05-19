@@ -17,6 +17,8 @@
         class="form-input"
         type="text"
         [value]="matterName"
+        placeholder="Ej. Pensamiento algoritmico"
+        (input)="onMatterNameChange($event)"
       />
 
       <span class="input-icon">✎</span>
@@ -34,6 +36,8 @@
         class="form-input"
         type="text"
         [value]="groupName"
+        placeholder="Ej. 2026"
+        (input)="onGroupNameChange($event)"
       />
 
       <span class="input-icon">✎</span>

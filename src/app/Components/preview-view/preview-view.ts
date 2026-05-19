@@ -16,6 +16,7 @@ import { InputComponent } from '../input/input';
 import { CalendarCellComponent } from '../calendar-cell/calendar-cell';
 import { CellComponent } from '../cell/cell';
 import { DashboardView } from '../dashboard-view/dashboard-view';
+import { CalendarViewComponent } from "../calendar-view/calendar-view";
 
 @Component({
   selector: 'preview-view',
@@ -36,8 +37,9 @@ import { DashboardView } from '../dashboard-view/dashboard-view';
     InputComponent,
     CalendarCellComponent,
     CellComponent,
-    DashboardView
-  ],
+    DashboardView,
+    CalendarViewComponent
+],
   templateUrl: './preview-view.html',
   styleUrl: './preview-view.css'
 })

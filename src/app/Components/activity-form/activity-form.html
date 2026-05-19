@@ -98,10 +98,11 @@
         <input
           id="realHours"
           class="form-input"
-          type="text"
+          type="number"
+          min="0"
           [value]="realHours"
+          (input)="realHours = +$any($event.target).value"
         />
-
         <span class="input-icon">✎</span>
       </div>
 
@@ -129,3 +130,4 @@
     </button>
   </footer>
 </form>
+

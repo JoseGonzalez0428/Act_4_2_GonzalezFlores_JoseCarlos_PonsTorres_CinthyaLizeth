@@ -1,12 +1,12 @@
 <div class="calendar-view">
   <div class="calendar-view-content" [class.calendar-view-blur]="showActivityForm">
 
-    <app-ui-header-uaslp logoSrc="logo-png/uaslp-logo.png"></app-ui-header-uaslp>
+    <app-ui-header-uaslp logoSrc="logo-png/image.png"></app-ui-header-uaslp>
 
     <main class="calendar-main">
 
       <app-ui-header-materia
-        title="Estructura de datos"
+        [title]="materiaTitle"
         semester="Semestre 2020-2027/1"
         group="Grupo 2720"
         [showBackButton]="true"
@@ -24,29 +24,27 @@
             </app-ui-progress-bar>
         </div>
 
-            <div class="resumen-cells">
-                <div class="resumen-items">
-                    <span class="resumen-title">RESUMEN</span>
-                    <div class="resumen-items-row">
-                    <div class="resumen-item green">
-                        <span>80</span>
-                        <app-icon name="info" [size]="14" color="white"></app-icon>
-                    </div>
-                    <div class="resumen-item yellow">
-                        <span>01</span>
-                        <app-icon name="info" [size]="14" color="white"></app-icon>
-                    </div>
-                    <div class="resumen-item red">
-                        <span>02</span>
-                        <app-icon name="info" [size]="14" color="white"></app-icon>
-                    </div>
-                    <div class="resumen-item blue-light">
-                        <span>00</span>
-                        <app-icon name="info" [size]="14" color="blue"></app-icon>
-                    </div>
-                    </div>
-                </div>
+          <div class="resumen-items">
+            <span class="resumen-title">RESUMEN</span>
+            <div class="resumen-items-row">
+              <div class="resumen-item green">
+                <span>{{ resumen.green }}</span>
+                <app-icon name="info" [size]="14" color="white"></app-icon>
+              </div>
+              <div class="resumen-item yellow">
+                <span>{{ resumen.yellow }}</span>
+                <app-icon name="info" [size]="14" color="white"></app-icon>
+              </div>
+              <div class="resumen-item red">
+                <span>{{ resumen.red }}</span>
+                <app-icon name="info" [size]="14" color="white"></app-icon>
+              </div>
+              <div class="resumen-item blue-light">
+                <span>{{ resumen.blue }}</span>
+                <app-icon name="info" [size]="14" color="blue"></app-icon>
+              </div>
             </div>
+          </div>
         </section>
 
       <!-- ESTADO -->
@@ -71,7 +69,7 @@
       <div class="modal-content">
         <app-ui-activity-form
           (cancelClick)="closeActivityForm()"
-          (acceptClick)="acceptActivityForm()">
+          (acceptClick)="acceptActivityForm($event)">
         </app-ui-activity-form>
       </div>
     </div>

@@ -7,17 +7,19 @@
     }
   </header>
 
-<main class="ui-calendar-body">
-  @for (item of items; track $index) {
-    <app-calendar-cell
-      [number]="item.number"
-      [description]="item.description"
-      [color]="item.color || 'blue'"
-      [variant]="item.variant || 'outline'"
-      (click)="onCellClick(item)">
-    </app-calendar-cell>
-  }
-</main>
+  <main class="ui-calendar-body">
+    @for (item of items; track $index) {
+      <app-calendar-cell
+        [number]="item.number"
+        [description]="item.description"
+        [color]="item.color"
+        [variant]="item.isHovered ? 'dark' : item.variant"
+        (click)="onCellClick(item)"
+        (mouseenter)="onCellHover(item)"
+        (mouseleave)="onCellLeave(item)">
+      </app-calendar-cell>
+    }
+  </main>
 
   <footer class="ui-calendar-footer">
     <app-button label="Regresar" variant="secondary" icon="arrow-left"></app-button>

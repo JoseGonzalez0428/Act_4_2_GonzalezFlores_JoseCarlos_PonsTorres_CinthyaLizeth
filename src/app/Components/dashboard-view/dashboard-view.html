@@ -67,7 +67,8 @@
             [buttonText]="course.buttonText"
             [footerLabel]="course.footerLabel"
             [variant]="course.variant"
-          ></app-ui-card>
+            (footerClick)="goToCalendar(course)">
+          </app-ui-card>
         }
       </section>
     </main>

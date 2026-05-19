@@ -1,19 +1,22 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { CalendarCellComponent } from '../calendar-cell/calendar-cell';
 import { ButtonComponent } from '../button/button';
-import { IconComponent } from '../icon/icon';
 
 type CalendarDay = {
   number: string;
   description: string;
-  color?: 'blue' | 'green' | 'yellow' | 'red' | 'disabled';
-  variant?: 'outline' | 'filled' | 'dark';
+  color: 'blue' | 'green' | 'yellow' | 'red' | 'disabled';
+  variant: 'outline' | 'filled' | 'dark';
+  isHovered: boolean;
+  topic: string;
+  realHours: number;
 };
 
 @Component({
   selector: 'app-ui-calendar',
   standalone: true,
-  imports: [CalendarCellComponent,ButtonComponent,IconComponent],
+  imports: [CommonModule, CalendarCellComponent, ButtonComponent],
   templateUrl: './calendar.html',
   styleUrl: './calendar.css'
 })
@@ -24,47 +27,32 @@ export class Calendar {
 
   @Output() cellClick = new EventEmitter<any>();
 
-  onCellClick(item: any) {
+  items: CalendarDay[] = Array.from({ length: 31 }, (_, i) => ({
+    number: String(i + 1).padStart(2, '0'),
+    description: 'Sin tema',
+    color: 'blue',
+    variant: 'outline',
+    isHovered: false,
+    topic: '',
+    realHours: 0
+  }));
+
+  onCellClick(item: CalendarDay) {
     this.cellClick.emit(item);
   }
 
-  @Input() items: CalendarDay[] = [
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
+  onCellHover(item: CalendarDay) {
+    item.isHovered = true;
+  }
 
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
+  onCellLeave(item: CalendarDay) {
+    item.isHovered = false;
+  }
 
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
+  updateCellColor(number: string, color: 'blue' | 'green' | 'yellow' | 'red' | 'disabled') {
+    const cell = this.items.find(i => i.number === number);
+    if (cell) cell.color = color;
+  }
 
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' },
-
-    { number: '01', description: 'Description', color: 'blue', variant: 'outline' }
-  ];
+  
 }

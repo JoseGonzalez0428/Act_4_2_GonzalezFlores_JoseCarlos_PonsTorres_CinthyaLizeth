@@ -7,6 +7,7 @@ import { MatterForm, MatterFormData } from '../matter-form/matter-form';
 import { SearchBoxComponent } from '../search-box/search-box';
 import { ButtonComponent } from '../button/button';
 import { InputComponent } from '../input/input';
+import { Router } from '@angular/router';
 
 type CourseCard = {
   title: string;
@@ -29,12 +30,13 @@ type CourseCard = {
     MatterForm,
     SearchBoxComponent,
     ButtonComponent,
-    InputComponent
+    InputComponent,
   ],
   templateUrl: './dashboard-view.html',
   styleUrl: './dashboard-view.css'
 })
 export class DashboardView {
+  constructor(private router: Router) {}
   showMatterForm = false;
 
   courses: CourseCard[] = [
@@ -129,20 +131,28 @@ export class DashboardView {
   }
 
   acceptMatterForm(data: MatterFormData): void {
-  const matterName = data.matterName || 'Nueva Materia';
-  const groupName = data.groupName || '2026';
+    const matterName = data.matterName || 'Nueva Materia';
+    const groupName = data.groupName || '2026';
 
-  this.showMatterForm = false;
+    this.showMatterForm = false;
 
-  this.courses.push({
-    title: matterName,
-    subtitle: `Grupo ${groupName}`,
-    description: 'Texto',
-    progressLabel: 'Label',
-    progressValue: 0,
-    buttonText: 'Button',
-    footerLabel: 'Label',
-    variant: 'success'
-  });
-}
+    this.courses.push({
+      title: matterName,
+      subtitle: `Grupo ${groupName}`,
+      description: 'Texto',
+      progressLabel: 'Label',
+      progressValue: 0,
+      buttonText: 'Button',
+      footerLabel: 'Label',
+      variant: 'success'
+    });
+
+  
+  }
+
+  goToCalendar(course: any) {
+    this.router.navigate(['/calendario'], { 
+      state: { title: course.title } 
+    });
+  }
 }
